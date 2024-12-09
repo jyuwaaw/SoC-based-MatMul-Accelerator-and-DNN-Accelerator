@@ -1,0 +1,20 @@
+{
+    "0": {
+        "name": "pl_vecadd",
+        "file": "pl_vecadd.cpp",
+        "fileloc": "5",
+        "instructions": "56",
+        "total_instructions": "56",
+        "calls": "",
+        "basicblocks": "8",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

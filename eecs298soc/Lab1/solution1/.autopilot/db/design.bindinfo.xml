@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln14_fu_185_p2" SOURCE="pl_vecadd.cpp:14" VARIABLE="icmp_ln14" MODULE="pl_vecadd" LOOP="VITIS_LOOP_14_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln14_fu_191_p2" SOURCE="pl_vecadd.cpp:14" VARIABLE="add_ln14" MODULE="pl_vecadd" LOOP="VITIS_LOOP_14_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op fadd" ID="" IMPL="fulldsp" LATENCY="3" OPTYPE="fadd" PRAGMA="" RTLNAME="fadd_32ns_32ns_32_4_full_dsp_1_U1" SOURCE="pl_vecadd.cpp:17" VARIABLE="add" MODULE="pl_vecadd" LOOP="VITIS_LOOP_14_1" BUNDLEDNAME="" DSP="2" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln14_1_fu_242_p2" SOURCE="pl_vecadd.cpp:14" VARIABLE="icmp_ln14_1" MODULE="pl_vecadd" LOOP="VITIS_LOOP_14_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="ctrl_s_axi_U" SOURCE="" VARIABLE="" MODULE="pl_vecadd" LOOP="" BUNDLEDNAME="ctrl" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="data0_m_axi_U" SOURCE="" VARIABLE="" MODULE="pl_vecadd" LOOP="" BUNDLEDNAME="data0" DSP="0" BRAM="4" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="data1_m_axi_U" SOURCE="" VARIABLE="" MODULE="pl_vecadd" LOOP="" BUNDLEDNAME="data1" DSP="0" BRAM="4" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axi_master" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="data2_m_axi_U" SOURCE="" VARIABLE="" MODULE="pl_vecadd" LOOP="" BUNDLEDNAME="data2" DSP="0" BRAM="4" URAM="0"/>
+</BindInfo>

@@ -1,0 +1,918 @@
+INFO-FLOW: Workspace /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1 opened at Sun Nov 03 23:05:42 PST 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck26-sfvc784-2LV-c 
+Execute       create_platform xck26-sfvc784-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /ecelib/eceware/xilinx_2023.1/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+Command       create_platform done; 4.07 sec.
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 4.21 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -version=1.0.0 
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0.0
+Execute     config_export -version=1.0.0 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 4.33 sec.
+Execute   set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+Execute     create_platform xck26-sfvc784-2LV-c -board  
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.14 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog -version 1.0.0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.0.0 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.066 GB.
+Execute       set_directive_top matmul_optimized -name=matmul_optimized 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file 'Matmul_op.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling Matmul_op.cpp as C++
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang Matmul_op.cpp -foptimization-record-file=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/autopilot -I /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.cpp.clang.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -hls-platform-db-name=/ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/clang.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/.systemc_flag -fix-errors /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 3.09 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp std=gnu++14 -target fpga  -directive=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/all.directive.json -fix-errors /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 3.44 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 3.4 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang-tidy.loop-label.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 6.04 sec.
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/autopilot -I /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.bc -hls-platform-db-name=/ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 20.7 seconds. CPU system time: 1.47 seconds. Elapsed time: 22.46 seconds; current allocated memory: 1.071 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc -args  "/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.g.bc"  
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/Matmul_op.g.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.68 sec.
+Execute       run_link_or_opt -opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matmul_optimized -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matmul_optimized -reflow-float-conversion -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.73 sec.
+Execute       run_link_or_opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matmul_optimized 
+INFO-FLOW: run_clang exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=matmul_optimized -mllvm -hls-db-dir -mllvm /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c 2> /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 142 Compile/Link /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 142 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 181 Unroll/Inline /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 181 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 514 Performance/Pipeline /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 514 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 537 Optimizations /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 537 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_39_5' is marked as complete unroll implied by the pipeline pragma (Matmul_op.cpp:39:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_39_5' (Matmul_op.cpp:39:19) in function 'matmul_optimized' completely with a factor of 16 (Matmul_op.cpp:6:0)
+INFO: [HLS 214-248] Applying array_partition to 'A_local': Complete partitioning on dimension 2. (Matmul_op.cpp:16:8)
+INFO: [HLS 214-248] Applying array_partition to 'B_local': Complete partitioning on dimension 1. (Matmul_op.cpp:17:9)
+INFO: [HLS 214-248] Applying array_partition to 'AB_local': Complete partitioning on dimension 2. (Matmul_op.cpp:18:9)
+INFO: [HLS 214-115] Multiple burst reads of length 256 and bit width 32 in loop 'VITIS_LOOP_25_1'(Matmul_op.cpp:25:19) has been inferred on bundle 'dataA'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Matmul_op.cpp:25:19)
+INFO: [HLS 214-115] Multiple burst reads of length 256 and bit width 32 in loop 'VITIS_LOOP_25_1'(Matmul_op.cpp:25:19) has been inferred on bundle 'dataB'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Matmul_op.cpp:25:19)
+INFO: [HLS 214-115] Multiple burst writes of length 256 and bit width 32 in loop 'VITIS_LOOP_47_6'(Matmul_op.cpp:47:20) has been inferred on bundle 'dataAB'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (Matmul_op.cpp:47:20)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.56 seconds. CPU system time: 0.5 seconds. Elapsed time: 7.91 seconds; current allocated memory: 1.072 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.072 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matmul_optimized -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.0.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.073 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.1.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.2.prechk.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.074 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.g.1.bc to /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.1.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_26_2' (Matmul_op.cpp:26) in function 'matmul_optimized' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_47_6' (Matmul_op.cpp:47) in function 'matmul_optimized' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_47_6' (Matmul_op.cpp:47) in function 'matmul_optimized' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_7' (Matmul_op.cpp:48) in function 'matmul_optimized' completely with a factor of 16.
+Command         transform done; 0.17 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.1.tmp.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.097 GB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.2.bc -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_25_1' (Matmul_op.cpp:25:19) in function 'matmul_optimized'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_34_3' (Matmul_op.cpp:34:20) in function 'matmul_optimized'.
+Execute           auto_get_db
+Command         transform done; 0.16 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.117 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.56 sec.
+Command     elaborate done; 30.96 sec.
+Execute     ap_eval exec zip -j /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'matmul_optimized' ...
+Execute       ap_set_top_model matmul_optimized 
+Execute       get_model_list matmul_optimized -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model matmul_optimized 
+Execute       preproc_iomode -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       preproc_iomode -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       preproc_iomode -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       get_model_list matmul_optimized -filter all-wo-channel 
+INFO-FLOW: Model list for configure: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO-FLOW: Configuring Module : matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       apply_spec_resource_limit matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+INFO-FLOW: Configuring Module : matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       apply_spec_resource_limit matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+INFO-FLOW: Configuring Module : matmul_optimized_Pipeline_VITIS_LOOP_47_6 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       apply_spec_resource_limit matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+INFO-FLOW: Configuring Module : matmul_optimized ...
+Execute       set_default_model matmul_optimized 
+Execute       apply_spec_resource_limit matmul_optimized 
+INFO-FLOW: Model list for preprocess: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO-FLOW: Preprocessing Module: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       cdfg_preprocess -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+INFO-FLOW: Preprocessing Module: matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       cdfg_preprocess -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+INFO-FLOW: Preprocessing Module: matmul_optimized_Pipeline_VITIS_LOOP_47_6 ...
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       cdfg_preprocess -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+INFO-FLOW: Preprocessing Module: matmul_optimized ...
+Execute       set_default_model matmul_optimized 
+Execute       cdfg_preprocess -model matmul_optimized 
+Execute       rtl_gen_preprocess matmul_optimized 
+INFO-FLOW: Model list for synthesis: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       schedule -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_25_1_VITIS_LOOP_26_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_25_1_VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.17 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.120 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.verbose.sched.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       bind -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.120 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.verbose.bind.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.bind.adb -f 
+INFO-FLOW: Finish binding matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       schedule -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_3_VITIS_LOOP_35_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 69, loop 'VITIS_LOOP_34_3_VITIS_LOOP_35_4'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.03 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.1 seconds; current allocated memory: 1.121 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.verbose.sched.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.58 sec.
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       bind -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.36 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.9 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.96 seconds; current allocated memory: 1.121 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.verbose.bind.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.14 sec.
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.bind.adb -f 
+INFO-FLOW: Finish binding matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       schedule -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_47_6'.
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+WARNING: [HLS 200-880] The II Violation in module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' (loop 'VITIS_LOOP_47_6'): Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1) between bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49) and bus write operation ('dataAB_addr_write_ln49', Matmul_op.cpp:49) on port 'dataAB' (Matmul_op.cpp:49).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 16, Depth = 18, loop 'VITIS_LOOP_47_6'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.22 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.122 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.verbose.sched.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.17 sec.
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_optimized_Pipeline_VITIS_LOOP_47_6.
+Execute       set_default_model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       bind -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.11 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.122 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.verbose.bind.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.bind.adb -f 
+INFO-FLOW: Finish binding matmul_optimized_Pipeline_VITIS_LOOP_47_6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_optimized 
+Execute       schedule -model matmul_optimized 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.14 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.123 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.verbose.sched.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.17 sec.
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_optimized.
+Execute       set_default_model matmul_optimized 
+Execute       bind -model matmul_optimized 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.15 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.123 GB.
+Execute       syn_report -verbosereport -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.verbose.bind.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       db_write -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.bind.adb -f 
+INFO-FLOW: Finish binding matmul_optimized.
+Execute       get_model_list matmul_optimized -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       rtl_gen_preprocess matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       rtl_gen_preprocess matmul_optimized 
+INFO-FLOW: Model list for RTL generation: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -top_prefix matmul_optimized_ -sub_prefix matmul_optimized_ -mg_file /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2' pipeline 'VITIS_LOOP_25_1_VITIS_LOOP_26_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataA_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2'.
+Command       create_rtl_model done; 0.16 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.124 GB.
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -style xilinx -f -lang vhdl -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/vhdl/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -style xilinx -f -lang vlog -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/verilog/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+Execute       syn_report -csynth -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_csynth.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -rtlxml -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_csynth.xml 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -verbosereport -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.verbose.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -f -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.adb 
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -bindview -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 -p /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -top_prefix matmul_optimized_ -sub_prefix matmul_optimized_ -mg_file /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4' pipeline 'VITIS_LOOP_34_3_VITIS_LOOP_35_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4' is 10217 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4'.
+Command       create_rtl_model done; 0.12 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.131 GB.
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -style xilinx -f -lang vhdl -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/vhdl/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -style xilinx -f -lang vlog -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/verilog/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+Execute       syn_report -csynth -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_csynth.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -rtlxml -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_csynth.xml 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -verbosereport -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.verbose.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.17 sec.
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -f -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.adb 
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -bindview -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 -p /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -top_prefix matmul_optimized_ -sub_prefix matmul_optimized_ -mg_file /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matmul_optimized_Pipeline_VITIS_LOOP_47_6' pipeline 'VITIS_LOOP_47_6' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_optimized_Pipeline_VITIS_LOOP_47_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 1.136 GB.
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_47_6 -style xilinx -f -lang vhdl -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/vhdl/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       gen_rtl matmul_optimized_Pipeline_VITIS_LOOP_47_6 -style xilinx -f -lang vlog -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/verilog/matmul_optimized_matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+Execute       syn_report -csynth -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_47_6_csynth.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.13 sec.
+Execute       syn_report -rtlxml -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_Pipeline_VITIS_LOOP_47_6_csynth.xml 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -verbosereport -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.verbose.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.11 sec.
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -f -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.adb 
+Execute       db_write -model matmul_optimized_Pipeline_VITIS_LOOP_47_6 -bindview -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info matmul_optimized_Pipeline_VITIS_LOOP_47_6 -p /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_optimized' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model matmul_optimized -top_prefix  -sub_prefix matmul_optimized_ -mg_file /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/dataA' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/dataB' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/dataAB' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/B' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_optimized/AB' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matmul_optimized' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'A', 'B', 'AB' to AXI-Lite port ctrl.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_optimized'.
+INFO: [RTMG 210-278] Implementing memory 'matmul_optimized_A_local_RAM_AUTO_1R1W' using auto RAMs.
+Command       create_rtl_model done; 0.19 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 1.142 GB.
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_optimized -istop -style xilinx -f -lang vhdl -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/vhdl/matmul_optimized 
+Execute       gen_rtl matmul_optimized -istop -style xilinx -f -lang vlog -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/verilog/matmul_optimized 
+Execute       syn_report -csynth -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_csynth.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -rtlxml -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/matmul_optimized_csynth.xml 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -verbosereport -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.verbose.rpt 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Command       syn_report done; 0.11 sec.
+Execute       db_write -model matmul_optimized -f -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.adb 
+Execute       db_write -model matmul_optimized -bindview -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info matmul_optimized -p /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized 
+Execute       export_constraint_db -f -tool general -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.constraint.tcl 
+Execute       syn_report -designview -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.design.xml 
+Command       syn_report done; 0.27 sec.
+Execute       syn_report -csynthDesign -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth.rpt -MHOut /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xck26-sfvc784-2LV-c 
+Execute           ap_family_info -name xck26-sfvc784-2LV-c -data names 
+Execute           ap_part_info -quiet -name xck26-sfvc784-2LV-c -data family 
+Execute       syn_report -wcfg -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model matmul_optimized -o /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.protoinst 
+Execute       sc_get_clocks matmul_optimized 
+Execute       sc_get_portdomain matmul_optimized 
+INFO-FLOW: Model list for RTL component generation: matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO-FLOW: Handling components in module [matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2] ... 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.compgen.tcl 
+INFO-FLOW: Found component matmul_optimized_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4] ... 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.compgen.tcl 
+INFO-FLOW: Found component matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1.
+INFO-FLOW: Append model matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: Found component matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1.
+INFO-FLOW: Append model matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1
+INFO-FLOW: Found component matmul_optimized_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [matmul_optimized_Pipeline_VITIS_LOOP_47_6] ... 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.compgen.tcl 
+INFO-FLOW: Found component matmul_optimized_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [matmul_optimized] ... 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.tcl 
+INFO-FLOW: Found component matmul_optimized_A_local_RAM_AUTO_1R1W.
+INFO-FLOW: Append model matmul_optimized_A_local_RAM_AUTO_1R1W
+INFO-FLOW: Found component matmul_optimized_dataA_m_axi.
+INFO-FLOW: Append model matmul_optimized_dataA_m_axi
+INFO-FLOW: Found component matmul_optimized_dataB_m_axi.
+INFO-FLOW: Append model matmul_optimized_dataB_m_axi
+INFO-FLOW: Found component matmul_optimized_dataAB_m_axi.
+INFO-FLOW: Append model matmul_optimized_dataAB_m_axi
+INFO-FLOW: Found component matmul_optimized_ctrl_s_axi.
+INFO-FLOW: Append model matmul_optimized_ctrl_s_axi
+INFO-FLOW: Append model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2
+INFO-FLOW: Append model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4
+INFO-FLOW: Append model matmul_optimized_Pipeline_VITIS_LOOP_47_6
+INFO-FLOW: Append model matmul_optimized
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: matmul_optimized_flow_control_loop_pipe_sequential_init matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1 matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1 matmul_optimized_flow_control_loop_pipe_sequential_init matmul_optimized_flow_control_loop_pipe_sequential_init matmul_optimized_A_local_RAM_AUTO_1R1W matmul_optimized_dataA_m_axi matmul_optimized_dataB_m_axi matmul_optimized_dataAB_m_axi matmul_optimized_ctrl_s_axi matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 matmul_optimized_Pipeline_VITIS_LOOP_47_6 matmul_optimized
+INFO-FLOW: Generating /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1
+INFO-FLOW: To file: write model matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1
+INFO-FLOW: To file: write model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model matmul_optimized_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model matmul_optimized_A_local_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model matmul_optimized_dataA_m_axi
+INFO-FLOW: To file: write model matmul_optimized_dataB_m_axi
+INFO-FLOW: To file: write model matmul_optimized_dataAB_m_axi
+INFO-FLOW: To file: write model matmul_optimized_ctrl_s_axi
+INFO-FLOW: To file: write model matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2
+INFO-FLOW: To file: write model matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4
+INFO-FLOW: To file: write model matmul_optimized_Pipeline_VITIS_LOOP_47_6
+INFO-FLOW: To file: write model matmul_optimized
+INFO-FLOW: Generating /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/vhdl' dstVlogDir='/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/vlog' tclDir='/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db' modelList='matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1
+matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_A_local_RAM_AUTO_1R1W
+matmul_optimized_dataA_m_axi
+matmul_optimized_dataB_m_axi
+matmul_optimized_dataAB_m_axi
+matmul_optimized_ctrl_s_axi
+matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2
+matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4
+matmul_optimized_Pipeline_VITIS_LOOP_47_6
+matmul_optimized
+' expOnly='0'
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.compgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.compgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.compgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.tcl 
+Execute         source ./ctrl.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.76 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.37 seconds; current allocated memory: 1.148 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='matmul_optimized_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1
+matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_A_local_RAM_AUTO_1R1W
+matmul_optimized_dataA_m_axi
+matmul_optimized_dataB_m_axi
+matmul_optimized_dataAB_m_axi
+matmul_optimized_ctrl_s_axi
+matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2
+matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4
+matmul_optimized_Pipeline_VITIS_LOOP_47_6
+matmul_optimized
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.tbgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.tbgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.tbgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.constraint.tcl 
+Execute       sc_get_clocks matmul_optimized 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/misc/matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute       source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/misc/matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME ctrl_s_axi_U SOURCE {} VARIABLE {} MODULE matmul_optimized LOOP {} BUNDLEDNAME ctrl DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME dataA_m_axi_U SOURCE {} VARIABLE {} MODULE matmul_optimized LOOP {} BUNDLEDNAME dataA DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME dataAB_m_axi_U SOURCE {} VARIABLE {} MODULE matmul_optimized LOOP {} BUNDLEDNAME dataAB DSP 0 BRAM 4 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME dataB_m_axi_U SOURCE {} VARIABLE {} MODULE matmul_optimized LOOP {} BUNDLEDNAME dataB DSP 0 BRAM 4 URAM 0}} report_dict {TOPINST matmul_optimized MODULE2INSTS {matmul_optimized matmul_optimized matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 grp_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_fu_308 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 grp_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_fu_366 matmul_optimized_Pipeline_VITIS_LOOP_47_6 grp_matmul_optimized_Pipeline_VITIS_LOOP_47_6_fu_418} INST2MODULE {matmul_optimized matmul_optimized grp_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_fu_308 matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 grp_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_fu_366 matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 grp_matmul_optimized_Pipeline_VITIS_LOOP_47_6_fu_418 matmul_optimized_Pipeline_VITIS_LOOP_47_6} INSTDATA {matmul_optimized {DEPTH 1 CHILDREN {grp_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_fu_308 grp_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_fu_366 grp_matmul_optimized_Pipeline_VITIS_LOOP_47_6_fu_418}} grp_matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2_fu_308 {DEPTH 2 CHILDREN {}} grp_matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4_fu_366 {DEPTH 2 CHILDREN {}} grp_matmul_optimized_Pipeline_VITIS_LOOP_47_6_fu_418 {DEPTH 2 CHILDREN {}}} MODULEDATA {matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln25_fu_898_p2 SOURCE Matmul_op.cpp:25 VARIABLE add_ln25 LOOP VITIS_LOOP_25_1_VITIS_LOOP_26_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln25_1_fu_924_p2 SOURCE Matmul_op.cpp:25 VARIABLE add_ln25_1 LOOP VITIS_LOOP_25_1_VITIS_LOOP_26_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_966_p2 SOURCE Matmul_op.cpp:26 VARIABLE add_ln26 LOOP VITIS_LOOP_25_1_VITIS_LOOP_26_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_965_p2 SOURCE Matmul_op.cpp:34 VARIABLE add_ln34 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_1_fu_991_p2 SOURCE Matmul_op.cpp:34 VARIABLE add_ln34_1 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U69 SOURCE Matmul_op.cpp:40 VARIABLE mul LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U53 SOURCE Matmul_op.cpp:40 VARIABLE sum LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U70 SOURCE Matmul_op.cpp:40 VARIABLE mul_1 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U54 SOURCE Matmul_op.cpp:40 VARIABLE sum_1 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U71 SOURCE Matmul_op.cpp:40 VARIABLE mul_2 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U55 SOURCE Matmul_op.cpp:40 VARIABLE sum_2 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U72 SOURCE Matmul_op.cpp:40 VARIABLE mul_3 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U56 SOURCE Matmul_op.cpp:40 VARIABLE sum_3 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U73 SOURCE Matmul_op.cpp:40 VARIABLE mul_4 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U57 SOURCE Matmul_op.cpp:40 VARIABLE sum_4 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U74 SOURCE Matmul_op.cpp:40 VARIABLE mul_5 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U58 SOURCE Matmul_op.cpp:40 VARIABLE sum_5 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U75 SOURCE Matmul_op.cpp:40 VARIABLE mul_6 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U59 SOURCE Matmul_op.cpp:40 VARIABLE sum_6 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U76 SOURCE Matmul_op.cpp:40 VARIABLE mul_7 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U60 SOURCE Matmul_op.cpp:40 VARIABLE sum_7 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U77 SOURCE Matmul_op.cpp:40 VARIABLE mul_8 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U61 SOURCE Matmul_op.cpp:40 VARIABLE sum_8 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U78 SOURCE Matmul_op.cpp:40 VARIABLE mul_9 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U62 SOURCE Matmul_op.cpp:40 VARIABLE sum_9 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U79 SOURCE Matmul_op.cpp:40 VARIABLE mul_s LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U63 SOURCE Matmul_op.cpp:40 VARIABLE sum_10 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U80 SOURCE Matmul_op.cpp:40 VARIABLE mul_10 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U64 SOURCE Matmul_op.cpp:40 VARIABLE sum_11 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U81 SOURCE Matmul_op.cpp:40 VARIABLE mul_11 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U65 SOURCE Matmul_op.cpp:40 VARIABLE sum_12 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U82 SOURCE Matmul_op.cpp:40 VARIABLE mul_12 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U66 SOURCE Matmul_op.cpp:40 VARIABLE sum_13 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U83 SOURCE Matmul_op.cpp:40 VARIABLE mul_13 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U67 SOURCE Matmul_op.cpp:40 VARIABLE sum_14 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 2 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_3_max_dsp_1_U84 SOURCE Matmul_op.cpp:40 VARIABLE mul_14 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 3 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_4_full_dsp_1_U68 SOURCE Matmul_op.cpp:40 VARIABLE sum_15 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_1019_p2 SOURCE Matmul_op.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_34_3_VITIS_LOOP_35_4 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 80 BRAM 0 URAM 0}} matmul_optimized_Pipeline_VITIS_LOOP_47_6 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln47_fu_454_p2 SOURCE Matmul_op.cpp:47 VARIABLE add_ln47 LOOP VITIS_LOOP_47_6 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} matmul_optimized {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_U SOURCE Matmul_op.cpp:16 VARIABLE A_local LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_1_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_2_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_3_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_4_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_5_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_6_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_7_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_8_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_9_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_10_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_11_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_12_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_13_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_14_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_local_15_U SOURCE Matmul_op.cpp:16 VARIABLE A_local_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_U SOURCE Matmul_op.cpp:17 VARIABLE B_local LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_1_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_2_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_3_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_4_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_5_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_6_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_7_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_8_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_9_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_10_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_11_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_12_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_13_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_14_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME B_local_15_U SOURCE Matmul_op.cpp:17 VARIABLE B_local_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_1_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_2_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_3_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_4_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_5_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_6_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_7_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_8_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_9_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_10_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_11_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_12_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_13_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_14_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME AB_local_15_U SOURCE Matmul_op.cpp:18 VARIABLE AB_local_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 80 BRAM 12 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute       send_msg_by_id INFO @200-1603@%s  and missed bursts 
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.45 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.163 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matmul_optimized.
+INFO: [VLOG 209-307] Generating Verilog RTL for matmul_optimized.
+Execute       syn_report -model matmul_optimized -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command     autosyn done; 8.64 sec.
+Command   csynth_design done; 39.77 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 30.44 seconds. CPU system time: 2.27 seconds. Elapsed time: 39.77 seconds; current allocated memory: 99.215 MB.
+Command ap_source done; 44.29 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1 opened at Sun Nov 03 23:06:57 PST 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xck26-sfvc784-2LV-c 
+Execute       create_platform xck26-sfvc784-2LV-c -board  
+DBG:HLSDevice: Trying to load device library: /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /ecelib/eceware/xilinx_2023.1/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+Command       create_platform done; 4.57 sec.
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 4.72 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -version=1.0.0 
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0.0
+Execute     config_export -version=1.0.0 
+Command   open_solution done; 4.87 sec.
+Execute   set_part xck26-sfvc784-2LV-c 
+INFO: [HLS 200-1510] Running: set_part xck26-sfvc784-2LV-c 
+Execute     create_platform xck26-sfvc784-2LV-c -board  
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.17 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   config_export -format ip_catalog -rtl verilog -version 1.0.0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -version 1.0.0 
+Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog -version 1.0.0
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=matmul_optimized xml_exists=0
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to matmul_optimized
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=6
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=14 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1
+matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_flow_control_loop_pipe_sequential_init
+matmul_optimized_A_local_RAM_AUTO_1R1W
+matmul_optimized_dataA_m_axi
+matmul_optimized_dataB_m_axi
+matmul_optimized_dataAB_m_axi
+matmul_optimized_ctrl_s_axi
+matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2
+matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4
+matmul_optimized_Pipeline_VITIS_LOOP_47_6
+matmul_optimized
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized_Pipeline_VITIS_LOOP_47_6.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.constraint.tcl 
+Execute     sc_get_clocks matmul_optimized 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/misc/matmul_optimized_fadd_32ns_32ns_32_4_full_dsp_1_ip.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/misc/matmul_optimized_fmul_32ns_32ns_32_3_max_dsp_1_ip.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to matmul_optimized
+INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.compgen.dataonly.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=matmul_optimized
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.rtl_wrap.cfg.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.constraint.tcl 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/matmul_optimized.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
+Execute     ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /ecelib/eceware/xilinx_2023.1/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /users/ugrad/yuhuah2/eecs298soc/Matmul_op_ver2/solution1/impl/ip/pack.sh
+Execute     send_msg_by_id INFO @200-802@%s Matmul_op_ver2/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file Matmul_op_ver2/solution1/impl/export.zip
+Command   export_design done; 35.7 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 20.81 seconds. CPU system time: 2.34 seconds. Elapsed time: 35.7 seconds; current allocated memory: 9.902 MB.
+Command ap_source done; 40.78 sec.
+Execute cleanup_all 

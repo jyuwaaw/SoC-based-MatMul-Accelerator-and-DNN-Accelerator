@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.749-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_BREADY' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.305-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWUSER' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.298-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWREGION' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.290-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWQOS' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.283-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWPROT' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.276-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWCACHE' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.268-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWLOCK' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.262-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWBURST' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.255-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWSIZE' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.249-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWLEN' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.242-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWID' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.235-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWADDR' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.228-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_47_6/m_axi_dataAB_AWVALID' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:23.220-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARUSER' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:22.454-0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2/m_axi_dataB_ARREGION' to 0." projectName="Matmul_op_ver2" solutionName="solution1" date="2024-11-03T23:06:22.444-0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

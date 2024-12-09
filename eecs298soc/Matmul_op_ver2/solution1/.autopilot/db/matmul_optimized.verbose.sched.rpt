@@ -1,0 +1,356 @@
+
+
+================================================================
+== Vitis HLS Report for 'matmul_optimized'
+================================================================
+* Date:           Sun Nov  3 23:06:21 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Matmul_op_ver2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      862|      862|  8.620 us|  8.620 us|  863|  863|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 21 [1/1] (1.00ns)   --->   "%AB_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %AB"   --->   Operation 21 'read' 'AB_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 22 [1/1] (1.00ns)   --->   "%B_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %B"   --->   Operation 22 'read' 'B_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 23 [1/1] (1.00ns)   --->   "%A_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %A"   --->   Operation 23 'read' 'A_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%A_local = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 24 'alloca' 'A_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%A_local_1 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 25 'alloca' 'A_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%A_local_2 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 26 'alloca' 'A_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%A_local_3 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 27 'alloca' 'A_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%A_local_4 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 28 'alloca' 'A_local_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%A_local_5 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 29 'alloca' 'A_local_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%A_local_6 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 30 'alloca' 'A_local_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%A_local_7 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 31 'alloca' 'A_local_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%A_local_8 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 32 'alloca' 'A_local_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%A_local_9 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 33 'alloca' 'A_local_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%A_local_10 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 34 'alloca' 'A_local_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%A_local_11 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 35 'alloca' 'A_local_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%A_local_12 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 36 'alloca' 'A_local_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%A_local_13 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 37 'alloca' 'A_local_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%A_local_14 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 38 'alloca' 'A_local_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%A_local_15 = alloca i64 1" [Matmul_op.cpp:16]   --->   Operation 39 'alloca' 'A_local_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%B_local = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 40 'alloca' 'B_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%B_local_1 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 41 'alloca' 'B_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%B_local_2 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 42 'alloca' 'B_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%B_local_3 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 43 'alloca' 'B_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%B_local_4 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 44 'alloca' 'B_local_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%B_local_5 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 45 'alloca' 'B_local_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%B_local_6 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 46 'alloca' 'B_local_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%B_local_7 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 47 'alloca' 'B_local_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%B_local_8 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 48 'alloca' 'B_local_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%B_local_9 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 49 'alloca' 'B_local_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%B_local_10 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 50 'alloca' 'B_local_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%B_local_11 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 51 'alloca' 'B_local_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%B_local_12 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 52 'alloca' 'B_local_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%B_local_13 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 53 'alloca' 'B_local_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%B_local_14 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 54 'alloca' 'B_local_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%B_local_15 = alloca i64 1" [Matmul_op.cpp:17]   --->   Operation 55 'alloca' 'B_local_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%AB_local = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 56 'alloca' 'AB_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%AB_local_1 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 57 'alloca' 'AB_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%AB_local_2 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 58 'alloca' 'AB_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%AB_local_3 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 59 'alloca' 'AB_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%AB_local_4 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 60 'alloca' 'AB_local_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%AB_local_5 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 61 'alloca' 'AB_local_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%AB_local_6 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 62 'alloca' 'AB_local_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%AB_local_7 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 63 'alloca' 'AB_local_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%AB_local_8 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 64 'alloca' 'AB_local_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%AB_local_9 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 65 'alloca' 'AB_local_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%AB_local_10 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 66 'alloca' 'AB_local_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%AB_local_11 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 67 'alloca' 'AB_local_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%AB_local_12 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 68 'alloca' 'AB_local_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%AB_local_13 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 69 'alloca' 'AB_local_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%AB_local_14 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 70 'alloca' 'AB_local_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%AB_local_15 = alloca i64 1" [Matmul_op.cpp:18]   --->   Operation 71 'alloca' 'AB_local_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln25_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %A_read, i32 2, i32 63" [Matmul_op.cpp:25]   --->   Operation 72 'partselect' 'trunc_ln25_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln25_2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %B_read, i32 2, i32 63" [Matmul_op.cpp:25]   --->   Operation 73 'partselect' 'trunc_ln25_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %AB_read, i32 2, i32 63" [Matmul_op.cpp:47]   --->   Operation 74 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%sext_ln25 = sext i62 %trunc_ln25_1" [Matmul_op.cpp:25]   --->   Operation 75 'sext' 'sext_ln25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%dataA_addr = getelementptr i32 %dataA, i64 %sext_ln25" [Matmul_op.cpp:25]   --->   Operation 76 'getelementptr' 'dataA_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 77 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%sext_ln25_1 = sext i62 %trunc_ln25_2" [Matmul_op.cpp:25]   --->   Operation 78 'sext' 'sext_ln25_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%dataB_addr = getelementptr i32 %dataB, i64 %sext_ln25_1" [Matmul_op.cpp:25]   --->   Operation 79 'getelementptr' 'dataB_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [8/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 80 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 81 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 81 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 82 [7/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 82 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 83 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 83 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 84 [6/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 84 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 85 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 85 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 86 [5/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 86 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 87 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 87 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 88 [4/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 88 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 89 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 89 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 90 [3/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 90 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 91 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 91 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 92 [2/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 92 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 93 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataA_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 93 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 94 [1/8] (7.30ns)   --->   "%empty_21 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %dataB_addr, i32 256" [Matmul_op.cpp:25]   --->   Operation 94 'readreq' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 95 [2/2] (0.00ns)   --->   "%call_ln25 = call void @matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2, i32 %dataB, i32 %dataA, i62 %trunc_ln25_1, i62 %trunc_ln25_2, i32 %AB_local, i32 %B_local, i32 %B_local_1, i32 %B_local_2, i32 %B_local_3, i32 %B_local_4, i32 %B_local_5, i32 %B_local_6, i32 %B_local_7, i32 %B_local_8, i32 %B_local_9, i32 %B_local_10, i32 %B_local_11, i32 %B_local_12, i32 %B_local_13, i32 %B_local_14, i32 %B_local_15, i32 %A_local, i32 %A_local_1, i32 %A_local_2, i32 %A_local_3, i32 %A_local_4, i32 %A_local_5, i32 %A_local_6, i32 %A_local_7, i32 %A_local_8, i32 %A_local_9, i32 %A_local_10, i32 %A_local_11, i32 %A_local_12, i32 %A_local_13, i32 %A_local_14, i32 %A_local_15, i32 %AB_local_1, i32 %AB_local_2, i32 %AB_local_3, i32 %AB_local_4, i32 %AB_local_5, i32 %AB_local_6, i32 %AB_local_7, i32 %AB_local_8, i32 %AB_local_9, i32 %AB_local_10, i32 %AB_local_11, i32 %AB_local_12, i32 %AB_local_13, i32 %AB_local_14, i32 %AB_local_15" [Matmul_op.cpp:25]   --->   Operation 95 'call' 'call_ln25' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 96 [1/2] (0.00ns)   --->   "%call_ln25 = call void @matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2, i32 %dataB, i32 %dataA, i62 %trunc_ln25_1, i62 %trunc_ln25_2, i32 %AB_local, i32 %B_local, i32 %B_local_1, i32 %B_local_2, i32 %B_local_3, i32 %B_local_4, i32 %B_local_5, i32 %B_local_6, i32 %B_local_7, i32 %B_local_8, i32 %B_local_9, i32 %B_local_10, i32 %B_local_11, i32 %B_local_12, i32 %B_local_13, i32 %B_local_14, i32 %B_local_15, i32 %A_local, i32 %A_local_1, i32 %A_local_2, i32 %A_local_3, i32 %A_local_4, i32 %A_local_5, i32 %A_local_6, i32 %A_local_7, i32 %A_local_8, i32 %A_local_9, i32 %A_local_10, i32 %A_local_11, i32 %A_local_12, i32 %A_local_13, i32 %A_local_14, i32 %A_local_15, i32 %AB_local_1, i32 %AB_local_2, i32 %AB_local_3, i32 %AB_local_4, i32 %AB_local_5, i32 %AB_local_6, i32 %AB_local_7, i32 %AB_local_8, i32 %AB_local_9, i32 %AB_local_10, i32 %AB_local_11, i32 %AB_local_12, i32 %AB_local_13, i32 %AB_local_14, i32 %AB_local_15" [Matmul_op.cpp:25]   --->   Operation 96 'call' 'call_ln25' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 97 [2/2] (0.00ns)   --->   "%call_ln0 = call void @matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4, i32 %AB_local, i32 %A_local, i32 %A_local_1, i32 %A_local_2, i32 %A_local_3, i32 %A_local_4, i32 %A_local_5, i32 %A_local_6, i32 %A_local_7, i32 %A_local_8, i32 %A_local_9, i32 %A_local_10, i32 %A_local_11, i32 %A_local_12, i32 %A_local_13, i32 %A_local_14, i32 %A_local_15, i32 %AB_local_15, i32 %AB_local_14, i32 %AB_local_13, i32 %AB_local_12, i32 %AB_local_11, i32 %AB_local_10, i32 %AB_local_9, i32 %AB_local_8, i32 %AB_local_7, i32 %AB_local_6, i32 %AB_local_5, i32 %AB_local_4, i32 %AB_local_3, i32 %AB_local_2, i32 %AB_local_1, i32 %B_local, i32 %B_local_1, i32 %B_local_2, i32 %B_local_3, i32 %B_local_4, i32 %B_local_5, i32 %B_local_6, i32 %B_local_7, i32 %B_local_8, i32 %B_local_9, i32 %B_local_10, i32 %B_local_11, i32 %B_local_12, i32 %B_local_13, i32 %B_local_14, i32 %B_local_15"   --->   Operation 97 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 98 [1/2] (0.00ns)   --->   "%call_ln0 = call void @matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4, i32 %AB_local, i32 %A_local, i32 %A_local_1, i32 %A_local_2, i32 %A_local_3, i32 %A_local_4, i32 %A_local_5, i32 %A_local_6, i32 %A_local_7, i32 %A_local_8, i32 %A_local_9, i32 %A_local_10, i32 %A_local_11, i32 %A_local_12, i32 %A_local_13, i32 %A_local_14, i32 %A_local_15, i32 %AB_local_15, i32 %AB_local_14, i32 %AB_local_13, i32 %AB_local_12, i32 %AB_local_11, i32 %AB_local_10, i32 %AB_local_9, i32 %AB_local_8, i32 %AB_local_7, i32 %AB_local_6, i32 %AB_local_5, i32 %AB_local_4, i32 %AB_local_3, i32 %AB_local_2, i32 %AB_local_1, i32 %B_local, i32 %B_local_1, i32 %B_local_2, i32 %B_local_3, i32 %B_local_4, i32 %B_local_5, i32 %B_local_6, i32 %B_local_7, i32 %B_local_8, i32 %B_local_9, i32 %B_local_10, i32 %B_local_11, i32 %B_local_12, i32 %B_local_13, i32 %B_local_14, i32 %B_local_15"   --->   Operation 98 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln47 = sext i62 %trunc_ln1" [Matmul_op.cpp:47]   --->   Operation 99 'sext' 'sext_ln47' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 100 [1/1] (0.00ns)   --->   "%dataAB_addr = getelementptr i32 %dataAB, i64 %sext_ln47" [Matmul_op.cpp:47]   --->   Operation 100 'getelementptr' 'dataAB_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 101 [1/1] (7.30ns)   --->   "%empty_22 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %dataAB_addr, i32 256" [Matmul_op.cpp:47]   --->   Operation 101 'writereq' 'empty_22' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 102 [2/2] (0.00ns)   --->   "%call_ln47 = call void @matmul_optimized_Pipeline_VITIS_LOOP_47_6, i32 %dataAB, i62 %trunc_ln1, i32 %AB_local, i32 %AB_local_1, i32 %AB_local_2, i32 %AB_local_3, i32 %AB_local_4, i32 %AB_local_5, i32 %AB_local_6, i32 %AB_local_7, i32 %AB_local_8, i32 %AB_local_9, i32 %AB_local_10, i32 %AB_local_11, i32 %AB_local_12, i32 %AB_local_13, i32 %AB_local_14, i32 %AB_local_15" [Matmul_op.cpp:47]   --->   Operation 102 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 103 [1/2] (0.00ns)   --->   "%call_ln47 = call void @matmul_optimized_Pipeline_VITIS_LOOP_47_6, i32 %dataAB, i62 %trunc_ln1, i32 %AB_local, i32 %AB_local_1, i32 %AB_local_2, i32 %AB_local_3, i32 %AB_local_4, i32 %AB_local_5, i32 %AB_local_6, i32 %AB_local_7, i32 %AB_local_8, i32 %AB_local_9, i32 %AB_local_10, i32 %AB_local_11, i32 %AB_local_12, i32 %AB_local_13, i32 %AB_local_14, i32 %AB_local_15" [Matmul_op.cpp:47]   --->   Operation 103 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 104 [5/5] (7.30ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %dataAB_addr" [Matmul_op.cpp:52]   --->   Operation 104 'writeresp' 'empty_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 105 [4/5] (7.30ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %dataAB_addr" [Matmul_op.cpp:52]   --->   Operation 105 'writeresp' 'empty_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 106 [3/5] (7.30ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %dataAB_addr" [Matmul_op.cpp:52]   --->   Operation 106 'writeresp' 'empty_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 18> <Delay = 7.30>
+ST_19 : Operation 107 [2/5] (7.30ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %dataAB_addr" [Matmul_op.cpp:52]   --->   Operation 107 'writeresp' 'empty_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 7.30>
+ST_20 : Operation 108 [1/1] (0.00ns)   --->   "%spectopmodule_ln6 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_8" [Matmul_op.cpp:6]   --->   Operation 108 'spectopmodule' 'spectopmodule_ln6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dataA, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 256, void @empty_4, void @empty_5, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 109 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 110 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dataA"   --->   Operation 110 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 111 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dataB, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 256, void @empty_9, void @empty_5, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 111 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 112 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dataB"   --->   Operation 112 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 113 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %dataAB, void @empty_2, i32 0, i32 0, void @empty_3, i32 0, i32 256, void @empty_7, void @empty_5, void @empty_3, i32 16, i32 16, i32 16, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 113 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 114 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %dataAB"   --->   Operation 114 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %A, void @empty_12, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty, void @empty_0, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 116 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %A, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 116 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 117 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %B, void @empty_12, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty, void @empty_15, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 117 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 118 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %B, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 118 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 119 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %AB, void @empty_12, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty, void @empty_6, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 119 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 120 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %AB, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_1, i32 4294967295, i32 0"   --->   Operation 120 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 121 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_12, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0"   --->   Operation 121 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 122 [1/5] (7.30ns)   --->   "%empty_23 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %dataAB_addr" [Matmul_op.cpp:52]   --->   Operation 122 'writeresp' 'empty_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_20 : Operation 123 [1/1] (0.00ns)   --->   "%ret_ln52 = ret" [Matmul_op.cpp:52]   --->   Operation 123 'ret' 'ret_ln52' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('AB_read') on port 'AB' [21]  (1.000 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation ('dataA_addr', Matmul_op.cpp:25) [74]  (0.000 ns)
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 4>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 5>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 6>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 7>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 8>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', Matmul_op.cpp:25) on port 'dataA' (Matmul_op.cpp:25) [75]  (7.300 ns)
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 0.000ns
+The critical path consists of the following:
+
+ <State 13>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation ('dataAB_addr', Matmul_op.cpp:47) [84]  (0.000 ns)
+	bus request operation ('empty_22', Matmul_op.cpp:47) on port 'dataAB' (Matmul_op.cpp:47) [85]  (7.300 ns)
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 0.000ns
+The critical path consists of the following:
+
+ <State 16>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_23', Matmul_op.cpp:52) on port 'dataAB' (Matmul_op.cpp:52) [87]  (7.300 ns)
+
+ <State 17>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_23', Matmul_op.cpp:52) on port 'dataAB' (Matmul_op.cpp:52) [87]  (7.300 ns)
+
+ <State 18>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_23', Matmul_op.cpp:52) on port 'dataAB' (Matmul_op.cpp:52) [87]  (7.300 ns)
+
+ <State 19>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_23', Matmul_op.cpp:52) on port 'dataAB' (Matmul_op.cpp:52) [87]  (7.300 ns)
+
+ <State 20>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_23', Matmul_op.cpp:52) on port 'dataAB' (Matmul_op.cpp:52) [87]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

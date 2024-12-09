@@ -1,0 +1,65 @@
+{
+    "1": {
+        "name": "matmul_optimized_Pipeline_VITIS_LOOP_25_1_VITIS_LOOP_26_2",
+        "file": "Matmul_op.cpp",
+        "fileloc": "0",
+        "instructions": "193",
+        "total_instructions": "193",
+        "calls": "",
+        "basicblocks": "55",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "54"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "matmul_optimized_Pipeline_VITIS_LOOP_34_3_VITIS_LOOP_35_4",
+        "file": "Matmul_op.cpp",
+        "fileloc": "0",
+        "instructions": "175",
+        "total_instructions": "175",
+        "calls": "",
+        "basicblocks": "21",
+        "loads": {
+            "L": "35"
+        },
+        "stores": {
+            "L": "22"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "matmul_optimized_Pipeline_VITIS_LOOP_47_6",
+        "file": "Matmul_op.cpp",
+        "fileloc": "0",
+        "instructions": "83",
+        "total_instructions": "83",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "17"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "matmul_optimized",
+        "file": "Matmul_op.cpp",
+        "fileloc": "6",
+        "instructions": "82",
+        "total_instructions": "533",
+        "calls": "1 2 3",
+        "basicblocks": "1"
+    }
+}

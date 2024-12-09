@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <packageLog>
+        <logs message="ERROR: [IMPL 213-28] Failed to generate IP." projectName="Matmul_op" solutionName="solution1" date="2024-11-03T22:46:02.630-0800"/>
+      </packageLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <packageLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
