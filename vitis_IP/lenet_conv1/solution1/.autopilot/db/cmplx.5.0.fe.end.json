@@ -1,0 +1,56 @@
+{
+    "0": {
+        "name": "convolution1_hls",
+        "file": "letnet_conv1_hls.cpp",
+        "fileloc": "5",
+        "instructions": "186",
+        "total_instructions": "3902",
+        "calls": "1 2",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "convolution1_hls_Pipeline_VITIS_LOOP_22_2",
+        "file": "..\/Xilinx_Prj\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/letnet_hls\/letnet_conv1_hls.cpp",
+        "fileloc": "22",
+        "instructions": "1858",
+        "total_instructions": "1858",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "convolution1_hls_Pipeline_VITIS_LOOP_22_21",
+        "file": "..\/Xilinx_Prj\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/letnet_hls\/letnet_conv1_hls.cpp",
+        "fileloc": "22",
+        "instructions": "1858",
+        "total_instructions": "1858",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

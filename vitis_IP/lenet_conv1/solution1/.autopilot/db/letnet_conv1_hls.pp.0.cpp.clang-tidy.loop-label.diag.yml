@@ -1,0 +1,94 @@
+---
+MainSourceFile:  'E:/Vitis/lenet_conv1/solution1/.autopilot/db/letnet_conv1_hls.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        'E:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          59336
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'E:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          286660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'E:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          287124
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'E:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          287589
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'E:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          570871
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_18_1:  '
+    FileOffset:      18
+    FilePath:        'E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          939315
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_18_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_22_2:  '
+    FileOffset:      22
+    FilePath:        'E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          939379
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_22_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_26_3:  '
+    FileOffset:      26
+    FilePath:        'E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          939439
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_26_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_30_4:  '
+    FileOffset:      30
+    FilePath:        'E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          939522
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_30_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_5:  '
+    FileOffset:      31
+    FilePath:        'E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp'
+    Replacements:    
+      - FilePath:        'E:\Vitis\lenet_conv1\solution1\.autopilot\db\letnet_conv1_hls.pp.0.cpp'
+        Offset:          939575
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_5: '
+...

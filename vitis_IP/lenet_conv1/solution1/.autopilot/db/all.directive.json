@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "convolution1_hls",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "convolution1_hls"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "E:/Vitis/lenet_conv1/solution1/csynth.tcl",
+    "sourceLine": 14,
+    "success": true
+  }
+]

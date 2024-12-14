@@ -1,0 +1,200 @@
+
+
+================================================================
+== Synthesis Summary Report of 'convolution1_hls'
+================================================================
++ General Information: 
+    * Date:           Fri Dec 13 16:11:32 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        lenet_conv1
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+    |                     Modules                    |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |             |     |
+    |                     & Loops                    |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT     | URAM|
+    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+    |+ convolution1_hls                              |  Timing|  -0.53|    27403|  2.740e+05|         -|    27404|     -|        no|  16 (5%)|  25 (2%)|  17818 (7%)|  20878 (17%)|    -|
+    | o VITIS_LOOP_18_1                              |       -|   7.30|    27402|  2.740e+05|      9134|        -|     3|        no|        -|        -|           -|            -|    -|
+    |  + convolution1_hls_Pipeline_VITIS_LOOP_22_2   |  Timing|  -0.53|     4534|  4.534e+04|         -|     4534|     -|        no|        -|        -|   4169 (1%)|    7105 (6%)|    -|
+    |   o VITIS_LOOP_22_2                            |      II|   7.30|     4532|  4.532e+04|       213|      160|    28|       yes|        -|        -|           -|            -|    -|
+    |  + convolution1_hls_Pipeline_VITIS_LOOP_22_21  |  Timing|  -0.53|     4534|  4.534e+04|         -|     4534|     -|        no|        -|        -|   4169 (1%)|    7105 (6%)|    -|
+    |   o VITIS_LOOP_22_2                            |      II|   7.30|     4532|  4.532e+04|       213|      160|    28|       yes|        -|        -|           -|            -|    -|
+    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface      | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|                | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_BIAS     | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_INPUT_r  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_OUTPUT_r | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_WEIGHTS  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++----------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++----------------+------------+---------------+--------+----------+
+| Interface      | Data Width | Address Width | Offset | Register |
++----------------+------------+---------------+--------+----------+
+| s_axi_CTRL_BUS | 32         | 4             |        |          |
+| s_axi_control  | 32         | 6             | 16     | 0        |
++----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++----------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface      | Register     | Offset | Width | Access | Description                      | Bit Fields                                                           |
++----------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_CTRL_BUS | CTRL         | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_CTRL_BUS | GIER         | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_CTRL_BUS | IP_IER       | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_CTRL_BUS | IP_ISR       | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control  | input_r_r_1  | 0x10   | 32    | W      | Data signal of input_r_r         |                                                                      |
+| s_axi_control  | input_r_r_2  | 0x14   | 32    | W      | Data signal of input_r_r         |                                                                      |
+| s_axi_control  | weights_r_1  | 0x1c   | 32    | W      | Data signal of weights_r         |                                                                      |
+| s_axi_control  | weights_r_2  | 0x20   | 32    | W      | Data signal of weights_r         |                                                                      |
+| s_axi_control  | bias_r_1     | 0x28   | 32    | W      | Data signal of bias_r            |                                                                      |
+| s_axi_control  | bias_r_2     | 0x2c   | 32    | W      | Data signal of bias_r            |                                                                      |
+| s_axi_control  | output_r_r_1 | 0x34   | 32    | W      | Data signal of output_r_r        |                                                                      |
+| s_axi_control  | output_r_r_2 | 0x38   | 32    | W      | Data signal of output_r_r        |                                                                      |
++----------------+--------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| input    | in        | float*   |
+| weights  | in        | float*   |
+| bias     | in        | float*   |
+| output   | out       | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+----------------+-----------+----------+---------------------------------------+
+| Argument | HW Interface   | HW Type   | HW Usage | HW Info                               |
++----------+----------------+-----------+----------+---------------------------------------+
+| input    | m_axi_INPUT_r  | interface |          |                                       |
+| input    | s_axi_control  | interface | offset   |                                       |
+| weights  | m_axi_WEIGHTS  | interface |          |                                       |
+| weights  | s_axi_control  | register  | offset   | name=weights_r_1 offset=0x1c range=32 |
+| weights  | s_axi_control  | register  | offset   | name=weights_r_2 offset=0x20 range=32 |
+| bias     | m_axi_BIAS     | interface |          |                                       |
+| bias     | s_axi_control  | register  | offset   | name=bias_r_1 offset=0x28 range=32    |
+| bias     | s_axi_control  | register  | offset   | name=bias_r_2 offset=0x2c range=32    |
+| output   | m_axi_OUTPUT_r | interface |          |                                       |
+| output   | s_axi_control  | interface | offset   |                                       |
++----------+----------------+-----------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
+| HW Interface   | Direction | Length | Width | Loop            | Loop Location                                                                                        |
++----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
+| m_axi_INPUT_r  | read      | 160    | 32    |                 |                                                                                                      |
+| m_axi_OUTPUT_r | write     | 784    | 32    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |
+| m_axi_WEIGHTS  | read      | 25     | 32    |                 |                                                                                                      |
++----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                                                                      | Direction | Burst Status | Length | Loop            | Loop Location                                                                                        | Resolution | Problem                                                                                                 |
++--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Widen Fail   |        |                 |                                                                                                      | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Fail         |        | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Inferred     | 160    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |            |                                                                                                         |
+| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Widen Fail   |        | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Fail         |        | VITIS_LOOP_18_1 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18:19 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Inferred     | 784    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |            |                                                                                                         |
++--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| Name                                          | DSP | Pragma | Variable            | Op  | Impl   | Latency |
++-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+| + convolution1_hls                            | 25  |        |                     |     |        |         |
+|   mul_3ns_8ns_10_1_1_U81                      |     |        | empty               | mul | auto   | 0       |
+|   empty_25_fu_314_p2                          |     |        | empty_25            | add | fabric | 0       |
+|   mul_3ns_13ns_15_1_1_U82                     |     |        | empty_26            | mul | auto   | 0       |
+|   empty_27_fu_470_p2                          |     |        | empty_27            | add | fabric | 0       |
+|   empty_28_fu_331_p2                          |     |        | empty_28            | add | fabric | 0       |
+|   tmp_fu_485_p2                               |     |        | tmp                 | add | fabric | 0       |
+|   empty_32_fu_495_p2                          |     |        | empty_32            | add | fabric | 0       |
+|   tmp1_fu_376_p2                              |     |        | tmp1                | add | fabric | 0       |
+|   empty_33_fu_386_p2                          |     |        | empty_33            | add | fabric | 0       |
+|   empty_36_fu_401_p2                          |     |        | empty_36            | add | fabric | 0       |
+|   add_ln18_fu_446_p2                          |     |        | add_ln18            | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_22_2  | 0   |        |                     |     |        |         |
+|    indvars_iv_next_fu_1244_p2                 |     |        | indvars_iv_next     | add | fabric | 0       |
+|    add_ln32_fu_1268_p2                        |     |        | add_ln32            | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_22_21 | 0   |        |                     |     |        |         |
+|    indvars_iv_next1246_fu_1244_p2             |     |        | indvars_iv_next1246 | add | fabric | 0       |
+|    add_ln32_fu_1268_p2                        |     |        | add_ln32            | add | fabric | 0       |
++-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name               | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                    |           |           |      |      |        |          |      |         | Banks            |
++--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + convolution1_hls |           |           | 16   | 0    |        |          |      |         |                  |
+|   CTRL_BUS_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   control_s_axi_U  | interface | s_axilite |      |      |        |          |      |         |                  |
+|   BIAS_m_axi_U     | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   INPUT_r_m_axi_U  | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   OUTPUT_r_m_axi_U | interface | m_axi     | 4    |      |        |          |      |         |                  |
+|   WEIGHTS_m_axi_U  | interface | m_axi     | 4    |      |        |          |      |         |                  |
++--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Type      | Options                                                   | Location                                                                                                                       |
++-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| interface | s_axilite port=return bundle=CTRL_BUS                     | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:11 in convolution1_hls, return  |
+| interface | m_axi depth=1024 port=input offset=slave bundle=INPUT     | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:12 in convolution1_hls, input   |
+| interface | m_axi depth=1024 port=weights offset=slave bundle=WEIGHTS | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:13 in convolution1_hls, weights |
+| interface | m_axi depth=6 port=bias offset=slave bundle=BIAS          | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:14 in convolution1_hls, bias    |
+| interface | m_axi depth=1680 port=output offset=slave bundle=OUTPUT   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:15 in convolution1_hls, output  |
+| unroll    | factor=2                                                  | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:19 in convolution1_hls          |
+| pipeline  | II=1                                                      | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:23 in convolution1_hls          |
++-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+
+

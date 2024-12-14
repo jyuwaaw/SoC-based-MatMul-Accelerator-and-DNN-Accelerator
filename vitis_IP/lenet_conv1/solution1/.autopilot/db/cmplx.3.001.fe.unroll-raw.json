@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 347,
+    "calls": "",
+    "file": "letnet_conv1_hls.cpp",
+    "fileloc": 5,
+    "instructions": 9446,
+    "loads": {
+      "T": 2802
+    },
+    "name": "convolution1_hls",
+    "stores": {
+      "T": 56
+    },
+    "total_instructions": 9446
+  }
+}
