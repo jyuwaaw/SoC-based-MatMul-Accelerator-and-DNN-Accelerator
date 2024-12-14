@@ -1,0 +1,20 @@
+{
+    "0": {
+        "name": "matmul_plain",
+        "file": "Matmul_no_op.cpp",
+        "fileloc": "6",
+        "instructions": "279",
+        "total_instructions": "279",
+        "calls": "",
+        "basicblocks": "7",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

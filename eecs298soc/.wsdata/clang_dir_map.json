@@ -1,0 +1,6 @@
+{
+  "workspaceRoot": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc",
+  "mapping": {
+    "Matmul_no_op.cpp": "hls_component"
+  }
+}

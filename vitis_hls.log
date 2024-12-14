@@ -1,0 +1,27 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'benj-' on host 'benji-proart' (Windows NT_amd64 version 6.2) on Fri Dec 13 14:49:47 -0800 2024
+INFO: [HLS 200-10] In directory 'E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: source E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj/solution1/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project final_prj 
+INFO: [HLS 200-10] Opening project 'E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj'.
+INFO: [HLS 200-1510] Running: set_top main 
+INFO: [HLS 200-1510] Running: add_files partII_main.cc 
+INFO: [HLS 200-10] Adding design file 'partII_main.cc' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+ERROR: [HLS 200-1023] Part 'xck26sfvc784-2LV-c' is not installed.
+command 'create_platform' returned error code
+    while executing
+"source E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj/solution1/csynth.tcl"
+    invoked from within
+"hls::main E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/final_prj/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.126 seconds; peak allocated memory: 70.184 MB.

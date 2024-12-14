@@ -1,0 +1,44 @@
+{
+  "name": "platform",
+  "type": "PLATFORM",
+  "configuration": {
+    "description": "",
+    "xsa": "E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/hw/hw.xsa",
+    "xsaPathInPlatform": "platform\\hw\\hw.xsa",
+    "emulationXsa": "E:/Xilinx/Vitis/2024.1/base_platforms/xilinx_zcu104_base_202410_1/hw_emu/hw_emu.xsa",
+    "emulationXsaPathInPlatform": "platform\\hw_emu\\hw_emu.xsa",
+    "isCustomFSBL": true,
+    "fsblPath": "",
+    "pmufwElf": "",
+    "flow": "EMBEDDED_ACCEL",
+    "processorsMap": {
+      "psu_cortexa53_0": "psu_cortexa53",
+      "psu_cortexa53_1": "psu_cortexa53",
+      "psu_cortexa53_2": "psu_cortexa53",
+      "psu_cortexa53_3": "psu_cortexa53",
+      "psu_cortexr5_0": "psu_cortexr5",
+      "psu_cortexr5_1": "psu_cortexr5",
+      "psu_pmu_0": "psu_pmu"
+    },
+    "supportedFamily": "zynquplus",
+    "componentType": "PLATFORM",
+    "domains": [
+      {
+        "name": "xrt",
+        "displayName": "xrt",
+        "processor": "psu_cortexa53",
+        "cpuType": "cortex-a53",
+        "cpuInstance": "psu_cortexa53",
+        "os": "linux",
+        "qemuData": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\qemu",
+        "qemuArgsFile": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\qemu\\qemu_args.txt",
+        "pmcQemuArgsFile": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\qemu\\pmu_args.txt",
+        "bifFile": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\boot\\linux.bif",
+        "bootDirectory": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\boot",
+        "sdCardDirectory": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\image",
+        "customDtb": "E:\\Xilinx_Prj\\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\\eecs298soc\\platform\\resources\\xrt\\boot\\system.dtb"
+      }
+    ],
+    "emptyToolchainConfiguration": []
+  }
+}
