@@ -1,0 +1,45 @@
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:1445:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:1445:7: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2419:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2419:5: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2433:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2433:5: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2447:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:2447:5: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:4076:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:4076:7: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5869:2: warning: Added loop label VITIS_LOOP_18_1:   [xilinx-label-all-loops]
+ for (int co = 0; co < 120; co++) {
+ ^~~
+ VITIS_LOOP_18_1: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5869:2: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5875:9: warning: Added loop label VITIS_LOOP_24_2:   [xilinx-label-all-loops]
+        for (int ci = 0; ci < 16; ci++) {
+        ^~~
+        VITIS_LOOP_24_2: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5875:9: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5876:13: warning: Added loop label VITIS_LOOP_25_3:   [xilinx-label-all-loops]
+            for (int kh = 0; kh < 5; kh++) {
+            ^~~
+            VITIS_LOOP_25_3: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5876:13: note: FIX-IT applied suggested code changes
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5877:17: warning: Added loop label VITIS_LOOP_26_4:   [xilinx-label-all-loops]
+                for (int kw = 0; kw < 5; kw++) {
+                ^~~
+                VITIS_LOOP_26_4: 
+E:\Vitis\lenet_ip_gen\solution1\.autopilot\db\lenet_conv5_hls.pp.0.cpp:5877:17: note: FIX-IT applied suggested code changes

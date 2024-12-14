@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 76,
+    "calls": "",
+    "file": "lenet_conv5_hls.cpp",
+    "fileloc": 5,
+    "instructions": 450,
+    "loads": {
+      "T": 8
+    },
+    "name": "convolution5_hls",
+    "stores": {
+      "T": 8
+    },
+    "total_instructions": 450
+  }
+}

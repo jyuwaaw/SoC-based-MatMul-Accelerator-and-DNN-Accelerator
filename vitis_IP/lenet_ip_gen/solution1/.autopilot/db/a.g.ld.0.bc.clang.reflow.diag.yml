@@ -1,0 +1,2739 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaPartiallyUnroll
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 10, Column: 0 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ''' ('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          convolution5_hls
+  - String:          ''' partially '
+  - String:          ''
+  - String:          'with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq34
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep35seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.1.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq36
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep37seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.2.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq38
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.3.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep39seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.3.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq40
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.4.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep41seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.4.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq42
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.5.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep43seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.5.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq44
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.6.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep45seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.6.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        input33seq46
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 28, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.7.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep47seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 29, Column: 40 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.7.load.12
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.1.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.2.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.3.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.4.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.5.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.6.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 34 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc38.7.load.4
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      BIAS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq34
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq36
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq38
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq40
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq42
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq44
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq46
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep35seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep37seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep39seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep41seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep43seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep45seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep47seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.1.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.2.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.3.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.4.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.5.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.6.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 36, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 36, Column: 26 }
+  - OrigDirection:   write
+  - OrigID:          for.inc38.7.store.7
+  - ArrayName:       output
+  - String:          ' '
+  - BundleName:      OUTPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_18_1
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:18:19'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq46
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep47seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq44
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep45seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq42
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep43seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq40
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep41seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq38
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep39seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq36
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep37seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq34
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgep35seq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          input33seq
+  - ArrayName:       input
+  - String:          ' '
+  - BundleName:      INPUT
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 24, Column: 26 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       weights
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_4
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:26:34'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq10
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq11
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq12
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq13
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq14
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      INPUT_r
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      INPUT_r
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq15
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      WEIGHTS
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          ' '
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ' '
+  - Function:        'convolution5_hls(float (*) [5][5], float (*) [16][5][5], float*, float (*) [1][1])'
+    DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                       Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp, 
+                   Line: 24, Column: 26 }
+Function:        _Z16convolution5_hlsPA5_A5_fPA16_S0_PfPA1_A1_f
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '400'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_2
+  - String:          '''('
+  - LoopLoc:         '../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv5_hls.cpp:24:26'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      WEIGHTS
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

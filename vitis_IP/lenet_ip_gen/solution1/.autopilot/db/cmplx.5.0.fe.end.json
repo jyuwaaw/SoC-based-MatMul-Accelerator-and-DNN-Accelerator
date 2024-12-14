@@ -1,0 +1,164 @@
+{
+    "1": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_4",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_45",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_41",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_43",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_47",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_46",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_42",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "convolution5_hls",
+        "file": "lenet_conv5_hls.cpp",
+        "fileloc": "5",
+        "instructions": "273",
+        "total_instructions": "553",
+        "calls": "1 3 7 4 8 2 6 5",
+        "basicblocks": "4",
+        "loads": {
+            "L": "9"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "convolution5_hls_Pipeline_VITIS_LOOP_24_2_VITIS_LOOP_25_3_VITIS_LOOP_26_44",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_conv5_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}
