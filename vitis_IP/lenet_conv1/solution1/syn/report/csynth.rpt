@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'convolution1_hls'
 ================================================================
 + General Information: 
-    * Date:           Fri Dec 13 16:11:32 2024
+    * Date:           Fri Dec 13 17:10:11 2024
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        lenet_conv1
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,17 +15,23 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
-    |                     Modules                    |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |         |         |            |             |     |
-    |                     & Loops                    |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF     |     LUT     | URAM|
-    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
-    |+ convolution1_hls                              |  Timing|  -0.53|    27403|  2.740e+05|         -|    27404|     -|        no|  16 (5%)|  25 (2%)|  17818 (7%)|  20878 (17%)|    -|
-    | o VITIS_LOOP_18_1                              |       -|   7.30|    27402|  2.740e+05|      9134|        -|     3|        no|        -|        -|           -|            -|    -|
-    |  + convolution1_hls_Pipeline_VITIS_LOOP_22_2   |  Timing|  -0.53|     4534|  4.534e+04|         -|     4534|     -|        no|        -|        -|   4169 (1%)|    7105 (6%)|    -|
-    |   o VITIS_LOOP_22_2                            |      II|   7.30|     4532|  4.532e+04|       213|      160|    28|       yes|        -|        -|           -|            -|    -|
-    |  + convolution1_hls_Pipeline_VITIS_LOOP_22_21  |  Timing|  -0.53|     4534|  4.534e+04|         -|     4534|     -|        no|        -|        -|   4169 (1%)|    7105 (6%)|    -|
-    |   o VITIS_LOOP_22_2                            |      II|   7.30|     4532|  4.532e+04|       213|      160|    28|       yes|        -|        -|           -|            -|    -|
-    +------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+---------+---------+------------+-------------+-----+
+    +----------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+---------+-----------+-----------+-----+
+    |                                         Modules                                        | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |         |         |           |           |     |
+    |                                         & Loops                                        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   |   DSP   |     FF    |    LUT    | URAM|
+    +----------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+---------+-----------+-----------+-----+
+    |+ convolution1_hls                                                                      |     -|  0.00|   353958|  3.540e+06|         -|   353959|      -|        no|  19 (6%)|  5 (~0%)|  5448 (2%)|  6304 (5%)|    -|
+    | + convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2                            |     -|  0.00|     1027|  1.027e+04|         -|     1027|      -|        no|        -|        -|   60 (~0%)|  173 (~0%)|    -|
+    |  o VITIS_LOOP_18_1_VITIS_LOOP_19_2                                                     |     -|  7.30|     1025|  1.025e+04|         3|        1|   1024|       yes|        -|        -|          -|          -|    -|
+    | + convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5            |     -|  0.00|      153|  1.530e+03|         -|      153|      -|        no|        -|        -|   60 (~0%)|  269 (~0%)|    -|
+    |  o VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5                                     |     -|  7.30|      151|  1.510e+03|         3|        1|    150|       yes|        -|        -|          -|          -|    -|
+    | + convolution1_hls_Pipeline_VITIS_LOOP_36_6                                            |     -|  0.00|        9|     90.000|         -|        9|      -|        no|        -|        -|   46 (~0%)|   69 (~0%)|    -|
+    |  o VITIS_LOOP_36_6                                                                     |     -|  7.30|        7|     70.000|         3|        1|      6|       yes|        -|        -|          -|          -|    -|
+    | o VITIS_LOOP_42_7                                                                      |     -|  7.30|   352920|  3.529e+06|    117640|        -|      3|        no|        -|        -|          -|          -|    -|
+    |  + convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1  |     -|  0.00|    58812|  5.881e+05|         -|    58812|      -|        no|        -|        -|  389 (~0%)|  582 (~0%)|    -|
+    |   o VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11                  |    II|  7.30|    58810|  5.881e+05|        14|        3|  19600|       yes|        -|        -|          -|          -|    -|
+    |  + convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS    |     -|  0.00|    58812|  5.881e+05|         -|    58812|      -|        no|        -|        -|  384 (~0%)|  582 (~0%)|    -|
+    |   o VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11                  |    II|  7.30|    58810|  5.881e+05|        14|        3|  19600|       yes|        -|        -|          -|          -|    -|
+    +----------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+---------+-----------+-----------+-----+
 
 
 ================================================================
@@ -115,86 +121,120 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
-| HW Interface   | Direction | Length | Width | Loop            | Loop Location                                                                                        |
-+----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
-| m_axi_INPUT_r  | read      | 160    | 32    |                 |                                                                                                      |
-| m_axi_OUTPUT_r | write     | 784    | 32    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |
-| m_axi_WEIGHTS  | read      | 25     | 32    |                 |                                                                                                      |
-+----------------+-----------+--------+-------+-----------------+------------------------------------------------------------------------------------------------------+
++----------------+-----------+--------+-------+-----------------+-----------------------------------------------------------------------------------------+
+| HW Interface   | Direction | Length | Width | Loop            | Loop Location                                                                           |
++----------------+-----------+--------+-------+-----------------+-----------------------------------------------------------------------------------------+
+| m_axi_BIAS     | read      | 6      | 32    | VITIS_LOOP_36_6 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22 |
+| m_axi_INPUT_r  | read      | 1024   | 32    | VITIS_LOOP_18_1 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18:22 |
+| m_axi_OUTPUT_r | write     | 784    | 32    | VITIS_LOOP_44_8 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44:19 |
+| m_axi_WEIGHTS  | read      | 150    | 32    | VITIS_LOOP_26_3 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26:22 |
++----------------+-----------+--------+-------+-----------------+-----------------------------------------------------------------------------------------+
 
 * All M_AXI Variable Accesses
-+--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
-| HW Interface | Variable | Access Location                                                                                      | Direction | Burst Status | Length | Loop            | Loop Location                                                                                        | Resolution | Problem                                                                                                 |
-+--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
-| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Widen Fail   |        |                 |                                                                                                      | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Fail         |        | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_INPUT  | input    | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43 | read      | Inferred     | 160    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |            |                                                                                                         |
-| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Widen Fail   |        | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Fail         |        | VITIS_LOOP_18_1 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18:19 | 214-230    | Stride is incompatible                                                                                  |
-| m_axi_OUTPUT | output   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34 | write     | Inferred     | 784    | VITIS_LOOP_22_2 | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19 |            |                                                                                                         |
-+--------------+----------+------------------------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
++---------------+----------+-----------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+-----------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface  | Variable | Access Location                                                                         | Direction | Burst Status | Length | Loop            | Loop Location                                                                           | Resolution | Problem                                                                                                 |
++---------------+----------+-----------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+-----------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_BIAS    | bias     | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:38:19 | read      | Widen Fail   |        | VITIS_LOOP_36_6 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_BIAS    | bias     | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:38:19 | read      | Inferred     | 6      | VITIS_LOOP_36_6 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22 |            |                                                                                                         |
+| m_axi_INPUT   | input    | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:21:22 | read      | Widen Fail   |        | VITIS_LOOP_19_2 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:19:26 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_INPUT   | input    | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:21:22 | read      | Inferred     | 1024   | VITIS_LOOP_18_1 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18:22 |            |                                                                                                         |
+| m_axi_OUTPUT  | output   | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34 | write     | Widen Fail   |        | VITIS_LOOP_45_9 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45:30 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_OUTPUT  | output   | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34 | write     | Fail         |        | VITIS_LOOP_42_7 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42:22 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_OUTPUT  | output   | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34 | write     | Inferred     | 784    | VITIS_LOOP_44_8 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44:19 |            |                                                                                                         |
+| m_axi_WEIGHTS | weights  | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:30:30 | read      | Widen Fail   |        | VITIS_LOOP_28_5 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:28:30 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_WEIGHTS | weights  | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:30:30 | read      | Inferred     | 150    | VITIS_LOOP_26_3 | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26:22 |            |                                                                                                         |
++---------------+----------+-----------------------------------------------------------------------------------------+-----------+--------------+--------+-----------------+-----------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
-| Name                                          | DSP | Pragma | Variable            | Op  | Impl   | Latency |
-+-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
-| + convolution1_hls                            | 25  |        |                     |     |        |         |
-|   mul_3ns_8ns_10_1_1_U81                      |     |        | empty               | mul | auto   | 0       |
-|   empty_25_fu_314_p2                          |     |        | empty_25            | add | fabric | 0       |
-|   mul_3ns_13ns_15_1_1_U82                     |     |        | empty_26            | mul | auto   | 0       |
-|   empty_27_fu_470_p2                          |     |        | empty_27            | add | fabric | 0       |
-|   empty_28_fu_331_p2                          |     |        | empty_28            | add | fabric | 0       |
-|   tmp_fu_485_p2                               |     |        | tmp                 | add | fabric | 0       |
-|   empty_32_fu_495_p2                          |     |        | empty_32            | add | fabric | 0       |
-|   tmp1_fu_376_p2                              |     |        | tmp1                | add | fabric | 0       |
-|   empty_33_fu_386_p2                          |     |        | empty_33            | add | fabric | 0       |
-|   empty_36_fu_401_p2                          |     |        | empty_36            | add | fabric | 0       |
-|   add_ln18_fu_446_p2                          |     |        | add_ln18            | add | fabric | 0       |
-|  + convolution1_hls_Pipeline_VITIS_LOOP_22_2  | 0   |        |                     |     |        |         |
-|    indvars_iv_next_fu_1244_p2                 |     |        | indvars_iv_next     | add | fabric | 0       |
-|    add_ln32_fu_1268_p2                        |     |        | add_ln32            | add | fabric | 0       |
-|  + convolution1_hls_Pipeline_VITIS_LOOP_22_21 | 0   |        |                     |     |        |         |
-|    indvars_iv_next1246_fu_1244_p2             |     |        | indvars_iv_next1246 | add | fabric | 0       |
-|    add_ln32_fu_1268_p2                        |     |        | add_ln32            | add | fabric | 0       |
-+-----------------------------------------------+-----+--------+---------------------+-----+--------+---------+
++---------------------------------------------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                                                                  | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++---------------------------------------------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| + convolution1_hls                                                                    | 5   |        |            |     |        |         |
+|   mul_3ns_13ns_15_1_1_U26                                                             |     |        | empty_27   | mul | auto   | 0       |
+|   empty_28_fu_366_p2                                                                  |     |        | empty_28   | add | fabric | 0       |
+|   add_ln51_2_fu_482_p2                                                                |     |        | add_ln51_2 | add | fabric | 0       |
+|   tmp_fu_381_p2                                                                       |     |        | tmp        | add | fabric | 0       |
+|   empty_31_fu_391_p2                                                                  |     |        | empty_31   | add | fabric | 0       |
+|   add_ln42_fu_406_p2                                                                  |     |        | add_ln42   | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2                          | 0   |        |            |     |        |         |
+|    add_ln18_1_fu_124_p2                                                               |     |        | add_ln18_1 | add | fabric | 0       |
+|    add_ln18_fu_147_p2                                                                 |     |        | add_ln18   | add | fabric | 0       |
+|    add_ln21_fu_191_p2                                                                 |     |        | add_ln21   | add | fabric | 0       |
+|    add_ln19_fu_206_p2                                                                 |     |        | add_ln19   | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5          | 0   |        |            |     |        |         |
+|    add_ln26_1_fu_152_p2                                                               |     |        | add_ln26_1 | add | fabric | 0       |
+|    add_ln26_fu_181_p2                                                                 |     |        | add_ln26   | add | fabric | 0       |
+|    add_ln27_fu_227_p2                                                                 |     |        | add_ln27   | add | fabric | 0       |
+|    add_ln28_fu_324_p2                                                                 |     |        | add_ln28   | add | fabric | 0       |
+|    add_ln27_1_fu_330_p2                                                               |     |        | add_ln27_1 | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_36_6                                          | 0   |        |            |     |        |         |
+|    add_ln36_fu_96_p2                                                                  |     |        | add_ln36   | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1 | 0   |        |            |     |        |         |
+|    add_ln44_1_fu_251_p2                                                               |     |        | add_ln44_1 | add | fabric | 0       |
+|    add_ln44_fu_269_p2                                                                 |     |        | add_ln44   | add | fabric | 0       |
+|    add_ln45_fu_321_p2                                                                 |     |        | add_ln45   | add | fabric | 0       |
+|    add_ln48_fu_373_p2                                                                 |     |        | add_ln48   | add | fabric | 0       |
+|    add_ln51_1_fu_411_p2                                                               |     |        | add_ln51_1 | add | fabric | 0       |
+|    empty_fu_438_p2                                                                    |     |        | empty      | add | fabric | 0       |
+|    add_ln51_fu_463_p2                                                                 |     |        | add_ln51   | add | fabric | 0       |
+|    add_ln49_fu_482_p2                                                                 |     |        | add_ln49   | add | fabric | 0       |
+|    add_ln48_1_fu_500_p2                                                               |     |        | add_ln48_1 | add | fabric | 0       |
+|    add_ln45_1_fu_514_p2                                                               |     |        | add_ln45_1 | add | fabric | 0       |
+|  + convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS   | 0   |        |            |     |        |         |
+|    add_ln44_fu_247_p2                                                                 |     |        | add_ln44   | add | fabric | 0       |
+|    add_ln44_1_fu_265_p2                                                               |     |        | add_ln44_1 | add | fabric | 0       |
+|    add_ln45_1_fu_317_p2                                                               |     |        | add_ln45_1 | add | fabric | 0       |
+|    add_ln48_1_fu_369_p2                                                               |     |        | add_ln48_1 | add | fabric | 0       |
+|    add_ln51_fu_407_p2                                                                 |     |        | add_ln51   | add | fabric | 0       |
+|    empty_fu_434_p2                                                                    |     |        | empty      | add | fabric | 0       |
+|    add_ln51_1_fu_459_p2                                                               |     |        | add_ln51_1 | add | fabric | 0       |
+|    add_ln49_fu_478_p2                                                                 |     |        | add_ln49   | add | fabric | 0       |
+|    add_ln48_fu_496_p2                                                                 |     |        | add_ln48   | add | fabric | 0       |
+|    add_ln45_fu_510_p2                                                                 |     |        | add_ln45   | add | fabric | 0       |
++---------------------------------------------------------------------------------------+-----+--------+------------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| Name               | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
-|                    |           |           |      |      |        |          |      |         | Banks            |
-+--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
-| + convolution1_hls |           |           | 16   | 0    |        |          |      |         |                  |
-|   CTRL_BUS_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
-|   control_s_axi_U  | interface | s_axilite |      |      |        |          |      |         |                  |
-|   BIAS_m_axi_U     | interface | m_axi     | 4    |      |        |          |      |         |                  |
-|   INPUT_r_m_axi_U  | interface | m_axi     | 4    |      |        |          |      |         |                  |
-|   OUTPUT_r_m_axi_U | interface | m_axi     | 4    |      |        |          |      |         |                  |
-|   WEIGHTS_m_axi_U  | interface | m_axi     | 4    |      |        |          |      |         |                  |
-+--------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
++--------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| Name               | Usage        | Type      | BRAM | URAM | Pragma | Variable      | Impl | Latency | Bitwidth, Depth, |
+|                    |              |           |      |      |        |               |      |         | Banks            |
++--------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
+| + convolution1_hls |              |           | 19   | 0    |        |               |      |         |                  |
+|   CTRL_BUS_s_axi_U | interface    | s_axilite |      |      |        |               |      |         |                  |
+|   control_s_axi_U  | interface    | s_axilite |      |      |        |               |      |         |                  |
+|   BIAS_m_axi_U     | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   INPUT_r_m_axi_U  | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   OUTPUT_r_m_axi_U | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   WEIGHTS_m_axi_U  | interface    | m_axi     | 4    |      |        |               |      |         |                  |
+|   local_input_U    | ram_1p array |           | 2    |      |        | local_input   | auto | 1       | 32, 1024, 1      |
+|   local_weights_U  | ram_1p array |           | 2    |      |        | local_weights | auto | 1       | 32, 150, 1       |
+|   local_bias_U     | ram_1p array |           |      |      |        | local_bias    | auto | 1       | 32, 6, 1         |
++--------------------+--------------+-----------+------+------+--------+---------------+------+---------+------------------+
 
 
 ================================================================
 == Pragma Report
 ================================================================
 * Valid Pragma Syntax
-+-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Type      | Options                                                   | Location                                                                                                                       |
-+-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-| interface | s_axilite port=return bundle=CTRL_BUS                     | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:11 in convolution1_hls, return  |
-| interface | m_axi depth=1024 port=input offset=slave bundle=INPUT     | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:12 in convolution1_hls, input   |
-| interface | m_axi depth=1024 port=weights offset=slave bundle=WEIGHTS | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:13 in convolution1_hls, weights |
-| interface | m_axi depth=6 port=bias offset=slave bundle=BIAS          | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:14 in convolution1_hls, bias    |
-| interface | m_axi depth=1680 port=output offset=slave bundle=OUTPUT   | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:15 in convolution1_hls, output  |
-| unroll    | factor=2                                                  | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:19 in convolution1_hls          |
-| pipeline  | II=1                                                      | ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:23 in convolution1_hls          |
-+-----------+-----------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
++-----------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| Type      | Options                                                   | Location                                                                                                         |
++-----------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
+| interface | s_axilite port=return bundle=CTRL_BUS                     | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:7 in convolution1_hls, return  |
+| interface | m_axi depth=1024 port=input offset=slave bundle=INPUT     | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:8 in convolution1_hls, input   |
+| interface | m_axi depth=1024 port=weights offset=slave bundle=WEIGHTS | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:9 in convolution1_hls, weights |
+| interface | m_axi depth=6 port=bias offset=slave bundle=BIAS          | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:10 in convolution1_hls, bias   |
+| interface | m_axi depth=1680 port=output offset=slave bundle=OUTPUT   | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:11 in convolution1_hls, output |
+| pipeline  | II=1                                                      | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:20 in convolution1_hls         |
+| pipeline  | II=1                                                      | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:29 in convolution1_hls         |
+| pipeline  | II=1                                                      | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:37 in convolution1_hls         |
+| unroll    | factor=2                                                  | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:43 in convolution1_hls         |
+| pipeline  | II=1                                                      | ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:50 in convolution1_hls         |
++-----------+-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+
 
 

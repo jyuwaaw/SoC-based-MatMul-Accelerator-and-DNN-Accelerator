@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export version="1.0.0" format="ip_catalog" rtl="verilog"/>
+        <config_export format="ip_catalog" rtl="verilog" version="1.0.0"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="Kria KR260 Robotics Starter Kit SOM (xck26-sfvc784-2LV-c) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">

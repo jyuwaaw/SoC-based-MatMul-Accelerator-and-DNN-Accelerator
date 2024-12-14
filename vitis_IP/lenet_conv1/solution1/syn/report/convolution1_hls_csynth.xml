@@ -18,51 +18,51 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.833</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>27403</Best-caseLatency>
-<Average-caseLatency>27403</Average-caseLatency>
-<Worst-caseLatency>27403</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.274 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.274 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.274 ms</Worst-caseRealTimeLatency>
-<Interval-min>27404</Interval-min>
-<Interval-max>27404</Interval-max>
+<Best-caseLatency>353958</Best-caseLatency>
+<Average-caseLatency>353958</Average-caseLatency>
+<Worst-caseLatency>353958</Worst-caseLatency>
+<Best-caseRealTimeLatency>3.540 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>3.540 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>3.540 ms</Worst-caseRealTimeLatency>
+<Interval-min>353959</Interval-min>
+<Interval-max>353959</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_18_1>
+<VITIS_LOOP_42_7>
 <Slack>7.30</Slack>
 <TripCount>3</TripCount>
-<Latency>27402</Latency>
-<AbsoluteTimeLatency>274020</AbsoluteTimeLatency>
-<IterationLatency>9134</IterationLatency>
+<Latency>352920</Latency>
+<AbsoluteTimeLatency>3529200</AbsoluteTimeLatency>
+<IterationLatency>117640</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_18_1>
+</VITIS_LOOP_42_7>
 </SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
+<SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
 <SummaryOfLoopViolations>
-<VITIS_LOOP_18_1>
-<Name>VITIS_LOOP_18_1</Name>
+<VITIS_LOOP_42_7>
+<Name>VITIS_LOOP_42_7</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
-</VITIS_LOOP_18_1>
+<SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
+</VITIS_LOOP_42_7>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>16</BRAM_18K>
-<DSP>25</DSP>
-<FF>17818</FF>
-<LUT>20878</LUT>
+<BRAM_18K>19</BRAM_18K>
+<DSP>5</DSP>
+<FF>5448</FF>
+<LUT>6304</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

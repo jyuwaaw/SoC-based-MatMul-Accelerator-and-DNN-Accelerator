@@ -77,26 +77,26 @@ set debug_dir "E:/Vitis/lenet_conv1/solution1/.debug"
 set xo_hls_files_dir ""
 set hdl_module_list {convolution1_hls_flow_control_loop_pipe_sequential_init
 convolution1_hls_flow_control_loop_pipe_sequential_init
-convolution1_hls_mul_3ns_8ns_10_1_1
+convolution1_hls_flow_control_loop_pipe_sequential_init
+convolution1_hls_flow_control_loop_pipe_sequential_init
+convolution1_hls_flow_control_loop_pipe_sequential_init
 convolution1_hls_mul_3ns_13ns_15_1_1
 convolution1_hls_fadd_32ns_32ns_32_4_full_dsp_1
-convolution1_hls_fadd_32ns_32ns_32_4_full_dsp_1
-convolution1_hls_fadd_32ns_32ns_32_4_full_dsp_1
-convolution1_hls_fadd_32ns_32ns_32_4_full_dsp_1
-convolution1_hls_fadd_32ns_32ns_32_4_full_dsp_1
 convolution1_hls_fmul_32ns_32ns_32_3_max_dsp_1
-convolution1_hls_fmul_32ns_32ns_32_3_max_dsp_1
-convolution1_hls_fmul_32ns_32ns_32_3_max_dsp_1
-convolution1_hls_fmul_32ns_32ns_32_3_max_dsp_1
-convolution1_hls_fmul_32ns_32ns_32_3_max_dsp_1
+convolution1_hls_local_input_RAM_AUTO_1R1W
+convolution1_hls_local_weights_RAM_AUTO_1R1W
+convolution1_hls_local_bias_RAM_AUTO_1R1W
 convolution1_hls_INPUT_r_m_axi
 convolution1_hls_WEIGHTS_m_axi
 convolution1_hls_BIAS_m_axi
 convolution1_hls_OUTPUT_r_m_axi
 convolution1_hls_CTRL_BUS_s_axi
 convolution1_hls_control_s_axi
-convolution1_hls_Pipeline_VITIS_LOOP_22_2
-convolution1_hls_Pipeline_VITIS_LOOP_22_21
+convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2
+convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5
+convolution1_hls_Pipeline_VITIS_LOOP_36_6
+convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1
+convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS
 convolution1_hls
 }
 set kernel_xo ""
@@ -2796,7 +2796,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_ver match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 10 machine 64 combinational 0 latency 27403 II x}
+set user_parameters_list {clk_period 10 machine 64 combinational 0 latency 353958 II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

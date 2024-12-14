@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'convolution1_hls'
 ================================================================
-* Date:           Fri Dec 13 16:11:25 2024
+* Date:           Fri Dec 13 17:10:09 2024
 
 * Version:        2023.2 (Build 4023990 on Oct 11 2023)
 * Project:        lenet_conv1
@@ -20,17 +20,17 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.833 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    27403|    27403|  0.274 ms|  0.274 ms|  27404|  27404|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   353958|   353958|  3.540 ms|  3.540 ms|  353959|  353959|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- VITIS_LOOP_18_1  |    27402|    27402|      9134|          -|          -|     3|        no|
+        |- VITIS_LOOP_42_7  |   352920|   352920|    117640|          -|          -|     3|        no|
         +-------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 67
+* Number of FSM states : 27
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -101,407 +101,183 @@ IsGatedGlobalClock: 0
 24 --> 25 
 25 --> 26 
 26 --> 27 
-27 --> 28 
-28 --> 29 
-29 --> 30 
-30 --> 31 
-31 --> 32 
-32 --> 33 
-33 --> 34 
-34 --> 35 
-35 --> 36 
-36 --> 37 
-37 --> 38 
-38 --> 39 
-39 --> 40 
-40 --> 41 
-41 --> 42 
-42 --> 43 
-43 --> 44 
-44 --> 45 
-45 --> 46 
-46 --> 47 
-47 --> 48 
-48 --> 49 
-49 --> 50 
-50 --> 51 
-51 --> 52 
-52 --> 53 
-53 --> 54 
-54 --> 55 
-55 --> 56 
-56 --> 57 
-57 --> 58 
-58 --> 59 
-59 --> 60 
-60 --> 61 
-61 --> 62 
-62 --> 63 
-63 --> 64 
-64 --> 65 
-65 --> 66 
-66 --> 67 
-67 --> 2 
+27 --> 12 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.00>
-ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%co = alloca i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 68 'alloca' 'co' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%spectopmodule_ln5 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:5]   --->   Operation 69 'spectopmodule' 'spectopmodule_ln5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %INPUT_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1024, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %INPUT_r"   --->   Operation 71 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %WEIGHTS, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1024, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %WEIGHTS"   --->   Operation 73 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %BIAS, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 6, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %BIAS"   --->   Operation 75 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %OUTPUT_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1680, void @empty_5, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %OUTPUT_r"   --->   Operation 77 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_11, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_12, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_13, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_14, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 87 [1/1] (1.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_r_r" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6]   --->   Operation 87 'read' 'output_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 88 [1/1] (1.00ns)   --->   "%bias_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %bias_r" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6]   --->   Operation 88 'read' 'bias_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 89 [1/1] (1.00ns)   --->   "%weights_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %weights_r" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6]   --->   Operation 89 'read' 'weights_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 90 [1/1] (1.00ns)   --->   "%input_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_r_r" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6]   --->   Operation 90 'read' 'input_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 91 [1/1] (0.42ns)   --->   "%store_ln18 = store i3 0, i3 %co" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 91 'store' 'store_ln18' <Predicate = true> <Delay = 0.42>
-ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln18 = br void %VITIS_LOOP_22_2" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 92 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%co = alloca i32 1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 28 'alloca' 'co' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (1.00ns)   --->   "%output_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %output_r_r"   --->   Operation 29 'read' 'output_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 30 [1/1] (1.00ns)   --->   "%bias_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %bias_r"   --->   Operation 30 'read' 'bias_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 31 [1/1] (1.00ns)   --->   "%weights_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %weights_r"   --->   Operation 31 'read' 'weights_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 32 [1/1] (1.00ns)   --->   "%input_r_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %input_r_r"   --->   Operation 32 'read' 'input_r_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%local_input = alloca i64 1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:13]   --->   Operation 33 'alloca' 'local_input' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%local_weights = alloca i64 1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:14]   --->   Operation 34 'alloca' 'local_weights' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%local_bias = alloca i64 1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:15]   --->   Operation 35 'alloca' 'local_bias' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %input_r_read, i32 2, i32 63" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 36 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %weights_read, i32 2, i32 63" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 37 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %bias_read, i32 2, i32 63" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 38 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.42ns)   --->   "%store_ln42 = store i3 0, i3 %co" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 39 'store' 'store_ln42' <Predicate = true> <Delay = 0.42>
 
-State 2 <SV = 1> <Delay = 3.52>
-ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%co_1 = load i3 %co" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 93 'load' 'co_1' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 94 [1/1] (0.67ns)   --->   "%icmp_ln18 = icmp_eq  i3 %co_1, i3 6" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 94 'icmp' 'icmp_ln18' <Predicate = true> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%br_ln18 = br i1 %icmp_ln18, void %VITIS_LOOP_22_2.split, void %for.end49" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 95 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln18_1 = zext i3 %co_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 96 'zext' 'zext_ln18_1' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 97 [1/1] (1.65ns)   --->   "%empty = mul i10 %zext_ln18_1, i10 100" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 97 'mul' 'empty' <Predicate = (!icmp_ln18)> <Delay = 1.65> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%p_cast8 = zext i10 %empty" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 98 'zext' 'p_cast8' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 99 [1/1] (1.08ns)   --->   "%empty_25 = add i64 %p_cast8, i64 %weights_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 99 'add' 'empty_25' <Predicate = (!icmp_ln18)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %co_1, i2 0" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 100 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%p_cast10 = zext i5 %tmp_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 101 'zext' 'p_cast10' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 102 [1/1] (1.08ns)   --->   "%empty_28 = add i64 %p_cast10, i64 %bias_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 102 'add' 'empty_28' <Predicate = (!icmp_ln18)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%p_cast = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_28, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 103 'partselect' 'p_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%p_cast_cast = sext i62 %p_cast" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 104 'sext' 'p_cast_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%BIAS_addr = getelementptr i32 %BIAS, i64 %p_cast_cast" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 105 'getelementptr' 'BIAS_addr' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%p_cast5 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_25, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 106 'partselect' 'p_cast5' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%p_cast5_cast = sext i62 %p_cast5" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 107 'sext' 'p_cast5_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%WEIGHTS_addr = getelementptr i32 %WEIGHTS, i64 %p_cast5_cast" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 108 'getelementptr' 'WEIGHTS_addr' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 109 [1/1] (0.78ns)   --->   "%tmp1 = add i10 %empty, i10 100" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 109 'add' 'tmp1' <Predicate = (!icmp_ln18)> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i10 %tmp1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 110 'zext' 'tmp1_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 111 [1/1] (1.08ns)   --->   "%empty_33 = add i64 %tmp1_cast, i64 %weights_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 111 'add' 'empty_33' <Predicate = (!icmp_ln18)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node empty_36)   --->   "%empty_35 = or i5 %tmp_1, i5 4" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 112 'or' 'empty_35' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node empty_36)   --->   "%p_cast11 = zext i5 %empty_35" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 113 'zext' 'p_cast11' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 114 [1/1] (1.08ns) (out node of the LUT)   --->   "%empty_36 = add i64 %p_cast11, i64 %bias_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 114 'add' 'empty_36' <Predicate = (!icmp_ln18)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%p_cast6 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_36, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 115 'partselect' 'p_cast6' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%p_cast6_cast = sext i62 %p_cast6" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 116 'sext' 'p_cast6_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%BIAS_addr_1 = getelementptr i32 %BIAS, i64 %p_cast6_cast" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 117 'getelementptr' 'BIAS_addr_1' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%p_cast7 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_33, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 118 'partselect' 'p_cast7' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%p_cast7_cast = sext i62 %p_cast7" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 119 'sext' 'p_cast7_cast' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%WEIGHTS_addr_1 = getelementptr i32 %WEIGHTS, i64 %p_cast7_cast" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 120 'getelementptr' 'WEIGHTS_addr_1' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 121 [1/1] (0.67ns)   --->   "%add_ln18 = add i3 %co_1, i3 2" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 121 'add' 'add_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 122 [1/1] (0.42ns)   --->   "%store_ln18 = store i3 %add_ln18, i3 %co" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 122 'store' 'store_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.42>
-ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%ret_ln43 = ret" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:43]   --->   Operation 123 'ret' 'ret_ln43' <Predicate = (icmp_ln18)> <Delay = 0.00>
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln18 = sext i62 %trunc_ln" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 40 'sext' 'sext_ln18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%INPUT_r_addr = getelementptr i32 %INPUT_r, i64 %sext_ln18" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 41 'getelementptr' 'INPUT_r_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 42 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%sext_ln26 = sext i62 %trunc_ln1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 43 'sext' 'sext_ln26' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%WEIGHTS_addr = getelementptr i32 %WEIGHTS, i64 %sext_ln26" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 44 'getelementptr' 'WEIGHTS_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [8/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 45 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%sext_ln36 = sext i62 %trunc_ln2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 46 'sext' 'sext_ln36' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%BIAS_addr = getelementptr i32 %BIAS, i64 %sext_ln36" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 47 'getelementptr' 'BIAS_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [8/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 48 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 3 <SV = 2> <Delay = 7.30>
-ST_3 : Operation 124 [8/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 124 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_3 : Operation 125 [8/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 125 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 49 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 49 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 50 [7/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 50 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 51 [7/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 51 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 126 [7/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 126 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 127 [7/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 127 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 128 [8/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 128 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 129 [8/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 129 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 52 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 52 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 53 [6/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 53 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 54 [6/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 54 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 130 [6/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 130 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 131 [6/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 131 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 132 [7/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 132 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 133 [7/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 133 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 55 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 55 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 56 [5/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 56 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 57 [5/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 57 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 134 [5/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 134 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 135 [5/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 135 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 136 [6/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 136 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 137 [6/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 137 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 58 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 58 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 59 [4/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 59 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 60 [4/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 60 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 138 [4/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 138 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 139 [4/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 139 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 140 [5/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 140 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 141 [5/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 141 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 61 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 61 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 62 [3/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 62 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 63 [3/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 63 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 142 [3/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 142 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_8 : Operation 143 [3/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 143 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_8 : Operation 144 [4/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 144 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_8 : Operation 145 [4/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 145 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 64 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 64 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 65 [2/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 65 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 66 [2/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 66 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 146 [2/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 146 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 147 [2/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 147 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 148 [3/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 148 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 149 [3/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 149 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 67 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %INPUT_r_addr, i32 1024" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 67 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 68 [1/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 150" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 68 'readreq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 69 [1/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BIAS_addr, i32 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 69 'readreq' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 150 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i3 %co_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 150 'zext' 'zext_ln18' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 151 [1/1] (2.23ns)   --->   "%empty_26 = mul i15 %zext_ln18, i15 3136" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 151 'mul' 'empty_26' <Predicate = true> <Delay = 2.23> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.23> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%p_cast9 = zext i15 %empty_26" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 152 'zext' 'p_cast9' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 153 [1/1] (1.08ns)   --->   "%empty_27 = add i64 %p_cast9, i64 %output_r_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 153 'add' 'empty_27' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 154 [1/8] (7.30ns)   --->   "%BIAS_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 154 'readreq' 'BIAS_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 155 [1/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 155 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 156 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_27, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 156 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 157 [1/1] (0.84ns)   --->   "%tmp = add i15 %empty_26, i15 3136" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 157 'add' 'tmp' <Predicate = true> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_cast = zext i15 %tmp" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 158 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 159 [1/1] (1.08ns)   --->   "%empty_32 = add i64 %tmp_cast, i64 %output_r_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 159 'add' 'empty_32' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 160 [2/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 160 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 161 [2/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 161 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 162 [1/1] (0.00ns)   --->   "%trunc_ln22_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_32, i32 2, i32 63" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 162 'partselect' 'trunc_ln22_1' <Predicate = true> <Delay = 0.00>
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 70 [2/2] (0.00ns)   --->   "%call_ln18 = call void @convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2, i32 %INPUT_r, i62 %trunc_ln, i32 %local_input" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 70 'call' 'call_ln18' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 71 [2/2] (0.00ns)   --->   "%call_ln26 = call void @convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5, i32 %WEIGHTS, i62 %trunc_ln1, i32 %local_weights" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 71 'call' 'call_ln26' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 72 [2/2] (0.00ns)   --->   "%call_ln36 = call void @convolution1_hls_Pipeline_VITIS_LOOP_36_6, i32 %BIAS, i62 %trunc_ln2, i32 %local_bias" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 72 'call' 'call_ln36' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 11 <SV = 10> <Delay = 7.30>
-ST_11 : Operation 163 [1/1] (7.30ns)   --->   "%BIAS_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %BIAS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 163 'read' 'BIAS_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_11 : Operation 164 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 164 'read' 'WEIGHTS_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_11 : Operation 165 [1/1] (0.00ns)   --->   "%sext_ln22 = sext i62 %trunc_ln" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 165 'sext' 'sext_ln22' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 166 [1/1] (0.00ns)   --->   "%OUTPUT_r_addr = getelementptr i32 %OUTPUT_r, i64 %sext_ln22" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 166 'getelementptr' 'OUTPUT_r_addr' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 167 [1/1] (7.30ns)   --->   "%empty_31 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %OUTPUT_r_addr, i32 784" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 167 'writereq' 'empty_31' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_11 : Operation 168 [1/8] (7.30ns)   --->   "%BIAS_load_1_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %BIAS_addr_1, i32 1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 168 'readreq' 'BIAS_load_1_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_11 : Operation 169 [1/8] (7.30ns)   --->   "%empty_38 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %WEIGHTS_addr_1, i32 25" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 169 'readreq' 'empty_38' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 73 [1/1] (0.00ns)   --->   "%spectopmodule_ln1 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_15" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:1]   --->   Operation 73 'spectopmodule' 'spectopmodule_ln1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %INPUT_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1024, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %INPUT_r"   --->   Operation 75 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %WEIGHTS, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1024, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 77 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %WEIGHTS"   --->   Operation 77 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %BIAS, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 6, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 79 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %BIAS"   --->   Operation 79 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %OUTPUT_r, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1680, void @empty_5, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 81 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %OUTPUT_r"   --->   Operation 81 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 82 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 82 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %input_r_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_11, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 84 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weights_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_12, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 86 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_r, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_13, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 88 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %output_r_r, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_14, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 91 [1/2] (0.00ns)   --->   "%call_ln18 = call void @convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2, i32 %INPUT_r, i62 %trunc_ln, i32 %local_input" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18]   --->   Operation 91 'call' 'call_ln18' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 92 [1/2] (0.00ns)   --->   "%call_ln26 = call void @convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5, i32 %WEIGHTS, i62 %trunc_ln1, i32 %local_weights" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26]   --->   Operation 92 'call' 'call_ln26' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 93 [1/2] (0.00ns)   --->   "%call_ln36 = call void @convolution1_hls_Pipeline_VITIS_LOOP_36_6, i32 %BIAS, i62 %trunc_ln2, i32 %local_bias" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36]   --->   Operation 93 'call' 'call_ln36' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln42 = br void %VITIS_LOOP_44_8" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 94 'br' 'br_ln42' <Predicate = true> <Delay = 0.00>
 
-State 12 <SV = 11> <Delay = 7.30>
-ST_12 : Operation 170 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 170 'read' 'WEIGHTS_addr_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_12 : Operation 171 [1/1] (7.30ns)   --->   "%BIAS_addr_1_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %BIAS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 171 'read' 'BIAS_addr_1_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 12 <SV = 11> <Delay = 4.16>
+ST_12 : Operation 95 [1/1] (0.00ns)   --->   "%co_2 = load i3 %co" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 95 'load' 'co_2' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 96 [1/1] (0.67ns)   --->   "%icmp_ln42 = icmp_eq  i3 %co_2, i3 6" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 96 'icmp' 'icmp_ln42' <Predicate = true> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 97 [1/1] (0.00ns)   --->   "%br_ln42 = br i1 %icmp_ln42, void %VITIS_LOOP_44_8.split, void %for.end119" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 97 'br' 'br_ln42' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln42_1 = zext i3 %co_2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 98 'zext' 'zext_ln42_1' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_12 : Operation 99 [1/1] (2.23ns)   --->   "%empty_27 = mul i15 %zext_ln42_1, i15 3136" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 99 'mul' 'empty_27' <Predicate = (!icmp_ln42)> <Delay = 2.23> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.23> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 100 [1/1] (0.00ns)   --->   "%p_cast = zext i15 %empty_27" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 100 'zext' 'p_cast' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_12 : Operation 101 [1/1] (1.08ns)   --->   "%empty_28 = add i64 %p_cast, i64 %output_r_read" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 101 'add' 'empty_28' <Predicate = (!icmp_ln42)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 102 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_28, i32 2, i32 63" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 102 'partselect' 'trunc_ln3' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_12 : Operation 103 [1/1] (0.84ns)   --->   "%tmp = add i15 %empty_27, i15 3136" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 103 'add' 'tmp' <Predicate = (!icmp_ln42)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_cast = zext i15 %tmp" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 104 'zext' 'tmp_cast' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_12 : Operation 105 [1/1] (1.08ns)   --->   "%empty_31 = add i64 %tmp_cast, i64 %output_r_read" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 105 'add' 'empty_31' <Predicate = (!icmp_ln42)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 106 [1/1] (0.00ns)   --->   "%trunc_ln44_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_31, i32 2, i32 63" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 106 'partselect' 'trunc_ln44_1' <Predicate = (!icmp_ln42)> <Delay = 0.00>
+ST_12 : Operation 107 [1/1] (0.67ns)   --->   "%add_ln42 = add i3 %co_2, i3 2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 107 'add' 'add_ln42' <Predicate = (!icmp_ln42)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 108 [1/1] (0.42ns)   --->   "%store_ln42 = store i3 %add_ln42, i3 %co" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 108 'store' 'store_ln42' <Predicate = (!icmp_ln42)> <Delay = 0.42>
+ST_12 : Operation 109 [1/1] (0.00ns)   --->   "%ret_ln59 = ret" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:59]   --->   Operation 109 'ret' 'ret_ln59' <Predicate = (icmp_ln42)> <Delay = 0.00>
 
 State 13 <SV = 12> <Delay = 7.30>
-ST_13 : Operation 172 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 172 'read' 'WEIGHTS_addr_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln42 = zext i3 %co_2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 110 'zext' 'zext_ln42' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 111 [1/1] (0.00ns)   --->   "%local_bias_addr = getelementptr i32 %local_bias, i64 0, i64 %zext_ln42" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 111 'getelementptr' 'local_bias_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 112 [2/2] (0.67ns)   --->   "%local_bias_load = load i3 %local_bias_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 112 'load' 'local_bias_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%sext_ln44 = sext i62 %trunc_ln3" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 113 'sext' 'sext_ln44' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (0.00ns)   --->   "%OUTPUT_r_addr = getelementptr i32 %OUTPUT_r, i64 %sext_ln44" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 114 'getelementptr' 'OUTPUT_r_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 115 [1/1] (7.30ns)   --->   "%empty_29 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %OUTPUT_r_addr, i32 784" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 115 'writereq' 'empty_29' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 14 <SV = 13> <Delay = 7.30>
-ST_14 : Operation 173 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 173 'read' 'WEIGHTS_addr_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 14 <SV = 13> <Delay = 0.67>
+ST_14 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %co_2, i32 1, i32 2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 116 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %tmp_1, i3 %co_2" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 117 'bitconcatenate' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 118 [1/2] (0.67ns)   --->   "%local_bias_load = load i3 %local_bias_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 118 'load' 'local_bias_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_14 : Operation 119 [2/2] (0.00ns)   --->   "%call_ln44 = call void @convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS.1, i32 %OUTPUT_r, i62 %trunc_ln3, i5 %tmp_2, i32 %local_weights, i32 %local_input, i32 %local_bias_load" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 119 'call' 'call_ln44' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 15 <SV = 14> <Delay = 7.30>
-ST_15 : Operation 174 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 174 'read' 'WEIGHTS_addr_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 120 [1/2] (0.00ns)   --->   "%call_ln44 = call void @convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS.1, i32 %OUTPUT_r, i62 %trunc_ln3, i5 %tmp_2, i32 %local_weights, i32 %local_input, i32 %local_bias_load" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 120 'call' 'call_ln44' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 16 <SV = 15> <Delay = 7.30>
-ST_16 : Operation 175 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 175 'read' 'WEIGHTS_addr_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_16 : Operation 121 [5/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 121 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 17 <SV = 16> <Delay = 7.30>
-ST_17 : Operation 176 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 176 'read' 'WEIGHTS_addr_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 122 [4/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 122 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 18 <SV = 17> <Delay = 7.30>
-ST_18 : Operation 177 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 177 'read' 'WEIGHTS_addr_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 123 [3/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 123 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 19 <SV = 18> <Delay = 7.30>
-ST_19 : Operation 178 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_8 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 178 'read' 'WEIGHTS_addr_read_8' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 124 [2/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 124 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 20 <SV = 19> <Delay = 7.30>
-ST_20 : Operation 179 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_9 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 179 'read' 'WEIGHTS_addr_read_9' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_20 : Operation 125 [1/1] (0.00ns)   --->   "%empty_30 = or i3 %co_2, i3 1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 125 'or' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 126 [1/1] (0.00ns)   --->   "%p_cast3 = zext i3 %empty_30" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 126 'zext' 'p_cast3' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 127 [1/5] (7.30ns)   --->   "%empty_32 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 127 'writeresp' 'empty_32' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_20 : Operation 128 [1/1] (0.00ns)   --->   "%local_bias_addr_1 = getelementptr i32 %local_bias, i64 0, i64 %p_cast3" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 128 'getelementptr' 'local_bias_addr_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 129 [2/2] (0.67ns)   --->   "%local_bias_load_1 = load i3 %local_bias_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 129 'load' 'local_bias_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_20 : Operation 130 [1/1] (0.00ns)   --->   "%sext_ln44_1 = sext i62 %trunc_ln44_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 130 'sext' 'sext_ln44_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 131 [1/1] (0.00ns)   --->   "%OUTPUT_r_addr_1 = getelementptr i32 %OUTPUT_r, i64 %sext_ln44_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 131 'getelementptr' 'OUTPUT_r_addr_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 132 [1/1] (7.30ns)   --->   "%empty_33 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %OUTPUT_r_addr_1, i32 784" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 132 'writereq' 'empty_33' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
-State 21 <SV = 20> <Delay = 7.30>
-ST_21 : Operation 180 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_10 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 180 'read' 'WEIGHTS_addr_read_10' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 21 <SV = 20> <Delay = 0.78>
+ST_21 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i3 %empty_30" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 133 'zext' 'zext_ln51' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_5 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %empty_30, i2 0" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 134 'bitconcatenate' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln51_8 = zext i5 %tmp_5" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 135 'zext' 'zext_ln51_8' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 136 [1/1] (0.78ns)   --->   "%add_ln51_2 = add i6 %zext_ln51_8, i6 %zext_ln51" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51]   --->   Operation 136 'add' 'add_ln51_2' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 137 [1/2] (0.67ns)   --->   "%local_bias_load_1 = load i3 %local_bias_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 137 'load' 'local_bias_load_1' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 6> <RAM>
+ST_21 : Operation 138 [2/2] (0.00ns)   --->   "%call_ln44 = call void @convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS, i32 %OUTPUT_r, i62 %trunc_ln44_1, i6 %add_ln51_2, i32 %local_weights, i32 %local_input, i32 %local_bias_load_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 138 'call' 'call_ln44' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 22 <SV = 21> <Delay = 7.30>
-ST_22 : Operation 181 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_11 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 181 'read' 'WEIGHTS_addr_read_11' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+State 22 <SV = 21> <Delay = 0.00>
+ST_22 : Operation 139 [1/2] (0.00ns)   --->   "%call_ln44 = call void @convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS, i32 %OUTPUT_r, i62 %trunc_ln44_1, i6 %add_ln51_2, i32 %local_weights, i32 %local_input, i32 %local_bias_load_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44]   --->   Operation 139 'call' 'call_ln44' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 23 <SV = 22> <Delay = 7.30>
-ST_23 : Operation 182 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_12 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 182 'read' 'WEIGHTS_addr_read_12' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_23 : Operation 140 [5/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 140 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 24 <SV = 23> <Delay = 7.30>
-ST_24 : Operation 183 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_13 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 183 'read' 'WEIGHTS_addr_read_13' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_24 : Operation 141 [4/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 141 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 25 <SV = 24> <Delay = 7.30>
-ST_25 : Operation 184 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_14 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 184 'read' 'WEIGHTS_addr_read_14' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_25 : Operation 142 [3/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 142 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 26 <SV = 25> <Delay = 7.30>
-ST_26 : Operation 185 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_15 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 185 'read' 'WEIGHTS_addr_read_15' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_26 : Operation 143 [2/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 143 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 27 <SV = 26> <Delay = 7.30>
-ST_27 : Operation 186 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_16 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 186 'read' 'WEIGHTS_addr_read_16' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 28 <SV = 27> <Delay = 7.30>
-ST_28 : Operation 187 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_17 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 187 'read' 'WEIGHTS_addr_read_17' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 29 <SV = 28> <Delay = 7.30>
-ST_29 : Operation 188 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_18 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 188 'read' 'WEIGHTS_addr_read_18' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 30 <SV = 29> <Delay = 7.30>
-ST_30 : Operation 189 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_19 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 189 'read' 'WEIGHTS_addr_read_19' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 31 <SV = 30> <Delay = 7.30>
-ST_31 : Operation 190 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_20 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 190 'read' 'WEIGHTS_addr_read_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 32 <SV = 31> <Delay = 7.30>
-ST_32 : Operation 191 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_21 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 191 'read' 'WEIGHTS_addr_read_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 33 <SV = 32> <Delay = 7.30>
-ST_33 : Operation 192 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_22 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 192 'read' 'WEIGHTS_addr_read_22' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 34 <SV = 33> <Delay = 7.30>
-ST_34 : Operation 193 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_23 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 193 'read' 'WEIGHTS_addr_read_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 35 <SV = 34> <Delay = 7.30>
-ST_35 : Operation 194 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_read_24 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 194 'read' 'WEIGHTS_addr_read_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 36 <SV = 35> <Delay = 7.30>
-ST_36 : Operation 195 [1/1] (0.00ns)   --->   "%empty_29 = bitcast i32 %BIAS_addr_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 195 'bitcast' 'empty_29' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 196 [1/1] (0.00ns)   --->   "%weight_val = bitcast i32 %WEIGHTS_addr_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 196 'bitcast' 'weight_val' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 197 [1/1] (0.00ns)   --->   "%weight_val_1 = bitcast i32 %WEIGHTS_addr_read_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 197 'bitcast' 'weight_val_1' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 198 [1/1] (0.00ns)   --->   "%weight_val_2 = bitcast i32 %WEIGHTS_addr_read_2" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 198 'bitcast' 'weight_val_2' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 199 [1/1] (0.00ns)   --->   "%weight_val_3 = bitcast i32 %WEIGHTS_addr_read_3" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 199 'bitcast' 'weight_val_3' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 200 [1/1] (0.00ns)   --->   "%weight_val_4 = bitcast i32 %WEIGHTS_addr_read_4" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 200 'bitcast' 'weight_val_4' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 201 [1/1] (0.00ns)   --->   "%weight_val_5 = bitcast i32 %WEIGHTS_addr_read_5" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 201 'bitcast' 'weight_val_5' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 202 [1/1] (0.00ns)   --->   "%weight_val_6 = bitcast i32 %WEIGHTS_addr_read_6" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 202 'bitcast' 'weight_val_6' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 203 [1/1] (0.00ns)   --->   "%weight_val_7 = bitcast i32 %WEIGHTS_addr_read_7" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 203 'bitcast' 'weight_val_7' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 204 [1/1] (0.00ns)   --->   "%weight_val_8 = bitcast i32 %WEIGHTS_addr_read_8" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 204 'bitcast' 'weight_val_8' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 205 [1/1] (0.00ns)   --->   "%weight_val_9 = bitcast i32 %WEIGHTS_addr_read_9" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 205 'bitcast' 'weight_val_9' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 206 [1/1] (0.00ns)   --->   "%weight_val_10 = bitcast i32 %WEIGHTS_addr_read_10" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 206 'bitcast' 'weight_val_10' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 207 [1/1] (0.00ns)   --->   "%weight_val_11 = bitcast i32 %WEIGHTS_addr_read_11" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 207 'bitcast' 'weight_val_11' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 208 [1/1] (0.00ns)   --->   "%weight_val_12 = bitcast i32 %WEIGHTS_addr_read_12" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 208 'bitcast' 'weight_val_12' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 209 [1/1] (0.00ns)   --->   "%weight_val_13 = bitcast i32 %WEIGHTS_addr_read_13" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 209 'bitcast' 'weight_val_13' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 210 [1/1] (0.00ns)   --->   "%weight_val_14 = bitcast i32 %WEIGHTS_addr_read_14" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 210 'bitcast' 'weight_val_14' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 211 [1/1] (0.00ns)   --->   "%weight_val_15 = bitcast i32 %WEIGHTS_addr_read_15" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 211 'bitcast' 'weight_val_15' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 212 [1/1] (0.00ns)   --->   "%weight_val_16 = bitcast i32 %WEIGHTS_addr_read_16" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 212 'bitcast' 'weight_val_16' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 213 [1/1] (0.00ns)   --->   "%weight_val_17 = bitcast i32 %WEIGHTS_addr_read_17" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 213 'bitcast' 'weight_val_17' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 214 [1/1] (0.00ns)   --->   "%weight_val_18 = bitcast i32 %WEIGHTS_addr_read_18" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 214 'bitcast' 'weight_val_18' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 215 [1/1] (0.00ns)   --->   "%weight_val_19 = bitcast i32 %WEIGHTS_addr_read_19" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 215 'bitcast' 'weight_val_19' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 216 [1/1] (0.00ns)   --->   "%weight_val_20 = bitcast i32 %WEIGHTS_addr_read_20" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 216 'bitcast' 'weight_val_20' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 217 [1/1] (0.00ns)   --->   "%weight_val_21 = bitcast i32 %WEIGHTS_addr_read_21" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 217 'bitcast' 'weight_val_21' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 218 [1/1] (0.00ns)   --->   "%weight_val_22 = bitcast i32 %WEIGHTS_addr_read_22" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 218 'bitcast' 'weight_val_22' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 219 [1/1] (0.00ns)   --->   "%weight_val_23 = bitcast i32 %WEIGHTS_addr_read_23" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 219 'bitcast' 'weight_val_23' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 220 [1/1] (0.00ns)   --->   "%weight_val_24 = bitcast i32 %WEIGHTS_addr_read_24" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 220 'bitcast' 'weight_val_24' <Predicate = true> <Delay = 0.00>
-ST_36 : Operation 221 [2/2] (1.08ns)   --->   "%call_ln22 = call void @convolution1_hls_Pipeline_VITIS_LOOP_22_2, i32 %OUTPUT_r, i32 %INPUT_r, i62 %trunc_ln, i64 %input_r_read, i32 %weight_val, i32 %weight_val_1, i32 %weight_val_2, i32 %weight_val_3, i32 %weight_val_4, i32 %weight_val_5, i32 %weight_val_6, i32 %weight_val_7, i32 %weight_val_8, i32 %weight_val_9, i32 %weight_val_10, i32 %weight_val_11, i32 %weight_val_12, i32 %weight_val_13, i32 %weight_val_14, i32 %weight_val_15, i32 %weight_val_16, i32 %weight_val_17, i32 %weight_val_18, i32 %weight_val_19, i32 %weight_val_20, i32 %weight_val_21, i32 %weight_val_22, i32 %weight_val_23, i32 %weight_val_24, i32 %empty_29" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 221 'call' 'call_ln22' <Predicate = true> <Delay = 1.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_36 : Operation 222 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 222 'read' 'WEIGHTS_addr_1_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 37 <SV = 36> <Delay = 7.30>
-ST_37 : Operation 223 [1/2] (0.00ns)   --->   "%call_ln22 = call void @convolution1_hls_Pipeline_VITIS_LOOP_22_2, i32 %OUTPUT_r, i32 %INPUT_r, i62 %trunc_ln, i64 %input_r_read, i32 %weight_val, i32 %weight_val_1, i32 %weight_val_2, i32 %weight_val_3, i32 %weight_val_4, i32 %weight_val_5, i32 %weight_val_6, i32 %weight_val_7, i32 %weight_val_8, i32 %weight_val_9, i32 %weight_val_10, i32 %weight_val_11, i32 %weight_val_12, i32 %weight_val_13, i32 %weight_val_14, i32 %weight_val_15, i32 %weight_val_16, i32 %weight_val_17, i32 %weight_val_18, i32 %weight_val_19, i32 %weight_val_20, i32 %weight_val_21, i32 %weight_val_22, i32 %weight_val_23, i32 %weight_val_24, i32 %empty_29" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 223 'call' 'call_ln22' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_37 : Operation 224 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 224 'read' 'WEIGHTS_addr_1_read_1' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 38 <SV = 37> <Delay = 7.30>
-ST_38 : Operation 225 [5/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 225 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_38 : Operation 226 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 226 'read' 'WEIGHTS_addr_1_read_2' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_38 : Operation 227 [1/1] (0.00ns)   --->   "%sext_ln22_1 = sext i62 %trunc_ln22_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 227 'sext' 'sext_ln22_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 228 [1/1] (0.00ns)   --->   "%OUTPUT_r_addr_1 = getelementptr i32 %OUTPUT_r, i64 %sext_ln22_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 228 'getelementptr' 'OUTPUT_r_addr_1' <Predicate = true> <Delay = 0.00>
-ST_38 : Operation 229 [1/1] (7.30ns)   --->   "%empty_39 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %OUTPUT_r_addr_1, i32 784" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 229 'writereq' 'empty_39' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 39 <SV = 38> <Delay = 7.30>
-ST_39 : Operation 230 [4/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 230 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_39 : Operation 231 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_3 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 231 'read' 'WEIGHTS_addr_1_read_3' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 40 <SV = 39> <Delay = 7.30>
-ST_40 : Operation 232 [3/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 232 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_40 : Operation 233 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_4 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 233 'read' 'WEIGHTS_addr_1_read_4' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 41 <SV = 40> <Delay = 7.30>
-ST_41 : Operation 234 [2/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 234 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_41 : Operation 235 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_5 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 235 'read' 'WEIGHTS_addr_1_read_5' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 42 <SV = 41> <Delay = 7.30>
-ST_42 : Operation 236 [1/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 236 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_42 : Operation 237 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_6 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 237 'read' 'WEIGHTS_addr_1_read_6' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 43 <SV = 42> <Delay = 7.30>
-ST_43 : Operation 238 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_7 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 238 'read' 'WEIGHTS_addr_1_read_7' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 44 <SV = 43> <Delay = 7.30>
-ST_44 : Operation 239 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_8 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 239 'read' 'WEIGHTS_addr_1_read_8' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 45 <SV = 44> <Delay = 7.30>
-ST_45 : Operation 240 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_9 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 240 'read' 'WEIGHTS_addr_1_read_9' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 46 <SV = 45> <Delay = 7.30>
-ST_46 : Operation 241 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_10 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 241 'read' 'WEIGHTS_addr_1_read_10' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 47 <SV = 46> <Delay = 7.30>
-ST_47 : Operation 242 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_11 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 242 'read' 'WEIGHTS_addr_1_read_11' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 48 <SV = 47> <Delay = 7.30>
-ST_48 : Operation 243 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_12 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 243 'read' 'WEIGHTS_addr_1_read_12' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 49 <SV = 48> <Delay = 7.30>
-ST_49 : Operation 244 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_13 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 244 'read' 'WEIGHTS_addr_1_read_13' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 50 <SV = 49> <Delay = 7.30>
-ST_50 : Operation 245 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_14 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 245 'read' 'WEIGHTS_addr_1_read_14' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 51 <SV = 50> <Delay = 7.30>
-ST_51 : Operation 246 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_15 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 246 'read' 'WEIGHTS_addr_1_read_15' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 52 <SV = 51> <Delay = 7.30>
-ST_52 : Operation 247 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_16 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 247 'read' 'WEIGHTS_addr_1_read_16' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 53 <SV = 52> <Delay = 7.30>
-ST_53 : Operation 248 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_17 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 248 'read' 'WEIGHTS_addr_1_read_17' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 54 <SV = 53> <Delay = 7.30>
-ST_54 : Operation 249 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_18 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 249 'read' 'WEIGHTS_addr_1_read_18' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 55 <SV = 54> <Delay = 7.30>
-ST_55 : Operation 250 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_19 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 250 'read' 'WEIGHTS_addr_1_read_19' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 56 <SV = 55> <Delay = 7.30>
-ST_56 : Operation 251 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_20 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 251 'read' 'WEIGHTS_addr_1_read_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 57 <SV = 56> <Delay = 7.30>
-ST_57 : Operation 252 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_21 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 252 'read' 'WEIGHTS_addr_1_read_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 58 <SV = 57> <Delay = 7.30>
-ST_58 : Operation 253 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_22 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 253 'read' 'WEIGHTS_addr_1_read_22' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 59 <SV = 58> <Delay = 7.30>
-ST_59 : Operation 254 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_23 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 254 'read' 'WEIGHTS_addr_1_read_23' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 60 <SV = 59> <Delay = 7.30>
-ST_60 : Operation 255 [1/1] (7.30ns)   --->   "%WEIGHTS_addr_1_read_24 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %WEIGHTS_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 255 'read' 'WEIGHTS_addr_1_read_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 61 <SV = 60> <Delay = 1.08>
-ST_61 : Operation 256 [1/1] (0.00ns)   --->   "%empty_37 = bitcast i32 %BIAS_addr_1_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 256 'bitcast' 'empty_37' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 257 [1/1] (0.00ns)   --->   "%weight_val_25 = bitcast i32 %WEIGHTS_addr_1_read" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 257 'bitcast' 'weight_val_25' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 258 [1/1] (0.00ns)   --->   "%weight_val_26 = bitcast i32 %WEIGHTS_addr_1_read_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 258 'bitcast' 'weight_val_26' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 259 [1/1] (0.00ns)   --->   "%weight_val_27 = bitcast i32 %WEIGHTS_addr_1_read_2" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 259 'bitcast' 'weight_val_27' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 260 [1/1] (0.00ns)   --->   "%weight_val_28 = bitcast i32 %WEIGHTS_addr_1_read_3" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 260 'bitcast' 'weight_val_28' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 261 [1/1] (0.00ns)   --->   "%weight_val_29 = bitcast i32 %WEIGHTS_addr_1_read_4" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 261 'bitcast' 'weight_val_29' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 262 [1/1] (0.00ns)   --->   "%weight_val_30 = bitcast i32 %WEIGHTS_addr_1_read_5" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 262 'bitcast' 'weight_val_30' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 263 [1/1] (0.00ns)   --->   "%weight_val_31 = bitcast i32 %WEIGHTS_addr_1_read_6" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 263 'bitcast' 'weight_val_31' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 264 [1/1] (0.00ns)   --->   "%weight_val_32 = bitcast i32 %WEIGHTS_addr_1_read_7" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 264 'bitcast' 'weight_val_32' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 265 [1/1] (0.00ns)   --->   "%weight_val_33 = bitcast i32 %WEIGHTS_addr_1_read_8" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 265 'bitcast' 'weight_val_33' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 266 [1/1] (0.00ns)   --->   "%weight_val_34 = bitcast i32 %WEIGHTS_addr_1_read_9" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 266 'bitcast' 'weight_val_34' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 267 [1/1] (0.00ns)   --->   "%weight_val_35 = bitcast i32 %WEIGHTS_addr_1_read_10" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 267 'bitcast' 'weight_val_35' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 268 [1/1] (0.00ns)   --->   "%weight_val_36 = bitcast i32 %WEIGHTS_addr_1_read_11" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 268 'bitcast' 'weight_val_36' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 269 [1/1] (0.00ns)   --->   "%weight_val_37 = bitcast i32 %WEIGHTS_addr_1_read_12" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 269 'bitcast' 'weight_val_37' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 270 [1/1] (0.00ns)   --->   "%weight_val_38 = bitcast i32 %WEIGHTS_addr_1_read_13" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 270 'bitcast' 'weight_val_38' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 271 [1/1] (0.00ns)   --->   "%weight_val_39 = bitcast i32 %WEIGHTS_addr_1_read_14" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 271 'bitcast' 'weight_val_39' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 272 [1/1] (0.00ns)   --->   "%weight_val_40 = bitcast i32 %WEIGHTS_addr_1_read_15" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 272 'bitcast' 'weight_val_40' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 273 [1/1] (0.00ns)   --->   "%weight_val_41 = bitcast i32 %WEIGHTS_addr_1_read_16" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 273 'bitcast' 'weight_val_41' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 274 [1/1] (0.00ns)   --->   "%weight_val_42 = bitcast i32 %WEIGHTS_addr_1_read_17" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 274 'bitcast' 'weight_val_42' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 275 [1/1] (0.00ns)   --->   "%weight_val_43 = bitcast i32 %WEIGHTS_addr_1_read_18" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 275 'bitcast' 'weight_val_43' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 276 [1/1] (0.00ns)   --->   "%weight_val_44 = bitcast i32 %WEIGHTS_addr_1_read_19" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 276 'bitcast' 'weight_val_44' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 277 [1/1] (0.00ns)   --->   "%weight_val_45 = bitcast i32 %WEIGHTS_addr_1_read_20" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 277 'bitcast' 'weight_val_45' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 278 [1/1] (0.00ns)   --->   "%weight_val_46 = bitcast i32 %WEIGHTS_addr_1_read_21" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 278 'bitcast' 'weight_val_46' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 279 [1/1] (0.00ns)   --->   "%weight_val_47 = bitcast i32 %WEIGHTS_addr_1_read_22" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 279 'bitcast' 'weight_val_47' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 280 [1/1] (0.00ns)   --->   "%weight_val_48 = bitcast i32 %WEIGHTS_addr_1_read_23" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 280 'bitcast' 'weight_val_48' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 281 [1/1] (0.00ns)   --->   "%weight_val_49 = bitcast i32 %WEIGHTS_addr_1_read_24" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 281 'bitcast' 'weight_val_49' <Predicate = true> <Delay = 0.00>
-ST_61 : Operation 282 [2/2] (1.08ns)   --->   "%call_ln22 = call void @convolution1_hls_Pipeline_VITIS_LOOP_22_21, i32 %OUTPUT_r, i32 %INPUT_r, i62 %trunc_ln22_1, i64 %input_r_read, i32 %weight_val_25, i32 %weight_val_26, i32 %weight_val_27, i32 %weight_val_28, i32 %weight_val_29, i32 %weight_val_30, i32 %weight_val_31, i32 %weight_val_32, i32 %weight_val_33, i32 %weight_val_34, i32 %weight_val_35, i32 %weight_val_36, i32 %weight_val_37, i32 %weight_val_38, i32 %weight_val_39, i32 %weight_val_40, i32 %weight_val_41, i32 %weight_val_42, i32 %weight_val_43, i32 %weight_val_44, i32 %weight_val_45, i32 %weight_val_46, i32 %weight_val_47, i32 %weight_val_48, i32 %weight_val_49, i32 %empty_37" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 282 'call' 'call_ln22' <Predicate = true> <Delay = 1.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 62 <SV = 61> <Delay = 0.00>
-ST_62 : Operation 283 [1/2] (0.00ns)   --->   "%call_ln22 = call void @convolution1_hls_Pipeline_VITIS_LOOP_22_21, i32 %OUTPUT_r, i32 %INPUT_r, i62 %trunc_ln22_1, i64 %input_r_read, i32 %weight_val_25, i32 %weight_val_26, i32 %weight_val_27, i32 %weight_val_28, i32 %weight_val_29, i32 %weight_val_30, i32 %weight_val_31, i32 %weight_val_32, i32 %weight_val_33, i32 %weight_val_34, i32 %weight_val_35, i32 %weight_val_36, i32 %weight_val_37, i32 %weight_val_38, i32 %weight_val_39, i32 %weight_val_40, i32 %weight_val_41, i32 %weight_val_42, i32 %weight_val_43, i32 %weight_val_44, i32 %weight_val_45, i32 %weight_val_46, i32 %weight_val_47, i32 %weight_val_48, i32 %weight_val_49, i32 %empty_37" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22]   --->   Operation 283 'call' 'call_ln22' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 63 <SV = 62> <Delay = 7.30>
-ST_63 : Operation 284 [5/5] (7.30ns)   --->   "%empty_40 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 284 'writeresp' 'empty_40' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 64 <SV = 63> <Delay = 7.30>
-ST_64 : Operation 285 [4/5] (7.30ns)   --->   "%empty_40 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 285 'writeresp' 'empty_40' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 65 <SV = 64> <Delay = 7.30>
-ST_65 : Operation 286 [3/5] (7.30ns)   --->   "%empty_40 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 286 'writeresp' 'empty_40' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 66 <SV = 65> <Delay = 7.30>
-ST_66 : Operation 287 [2/5] (7.30ns)   --->   "%empty_40 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 287 'writeresp' 'empty_40' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-
-State 67 <SV = 66> <Delay = 7.30>
-ST_67 : Operation 288 [1/1] (0.00ns)   --->   "%speclooptripcount_ln18 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 288 'speclooptripcount' 'speclooptripcount_ln18' <Predicate = true> <Delay = 0.00>
-ST_67 : Operation 289 [1/1] (0.00ns)   --->   "%specloopname_ln18 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 289 'specloopname' 'specloopname_ln18' <Predicate = true> <Delay = 0.00>
-ST_67 : Operation 290 [1/5] (7.30ns)   --->   "%empty_40 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 290 'writeresp' 'empty_40' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_67 : Operation 291 [1/1] (0.00ns)   --->   "%br_ln18 = br void %VITIS_LOOP_22_2" [../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18]   --->   Operation 291 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 144 [1/1] (0.00ns)   --->   "%speclooptripcount_ln42 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 144 'speclooptripcount' 'speclooptripcount_ln42' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 145 [1/1] (0.00ns)   --->   "%specloopname_ln42 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 145 'specloopname' 'specloopname_ln42' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 146 [1/5] (7.30ns)   --->   "%empty_34 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %OUTPUT_r_addr_1" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 146 'writeresp' 'empty_34' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_27 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln42 = br void %VITIS_LOOP_44_8" [../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42]   --->   Operation 147 'br' 'br_ln42' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -511,273 +287,112 @@ Target clock period: 10.000ns, clock uncertainty: 2.700ns.
 
  <State 1>: 1.000ns
 The critical path consists of the following:
-	s_axi read operation ('output_r_read', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6) on port 'output_r_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:6) [28]  (1.000 ns)
+	s_axi read operation ('output_r_read') on port 'output_r_r' [28]  (1.000 ns)
 
- <State 2>: 3.522ns
+ <State 2>: 7.300ns
 The critical path consists of the following:
-	'load' operation 3 bit ('co', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on local variable 'co', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18 [35]  (0.000 ns)
-	'mul' operation 10 bit ('empty', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [43]  (1.650 ns)
-	'add' operation 10 bit ('tmp1', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [120]  (0.787 ns)
-	'add' operation 64 bit ('empty_33', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [122]  (1.085 ns)
+	'getelementptr' operation 32 bit ('INPUT_r_addr', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [37]  (0.000 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 3>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 4>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 5>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 6>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 7>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 8>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
  <State 9>: 7.300ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
+	bus request operation ('empty', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) on port 'INPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18) [38]  (7.300 ns)
 
- <State 10>: 7.300ns
+ <State 10>: 0.000ns
 The critical path consists of the following:
-	bus request operation ('BIAS_load_req', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [55]  (7.300 ns)
 
- <State 11>: 7.300ns
+ <State 11>: 0.000ns
 The critical path consists of the following:
-	bus read operation ('BIAS_addr_read', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'BIAS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [56]  (7.300 ns)
 
- <State 12>: 7.300ns
+ <State 12>: 4.163ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_1', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [64]  (7.300 ns)
+	'load' operation 3 bit ('co', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on local variable 'co', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42 [53]  (0.000 ns)
+	'mul' operation 15 bit ('empty_27', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [63]  (2.236 ns)
+	'add' operation 15 bit ('tmp', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [79]  (0.842 ns)
+	'add' operation 64 bit ('empty_31', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [81]  (1.085 ns)
 
  <State 13>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_2', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [66]  (7.300 ns)
+	'getelementptr' operation 32 bit ('OUTPUT_r_addr', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44) [70]  (0.000 ns)
+	bus request operation ('empty_29', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44) [71]  (7.300 ns)
 
- <State 14>: 7.300ns
+ <State 14>: 0.677ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_3', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [68]  (7.300 ns)
+	'load' operation 32 bit ('local_bias_load', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on array 'local_bias', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:15 [67]  (0.677 ns)
 
- <State 15>: 7.300ns
+ <State 15>: 0.000ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_4', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [70]  (7.300 ns)
 
  <State 16>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_5', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [72]  (7.300 ns)
+	bus response operation ('empty_32', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [82]  (7.300 ns)
 
  <State 17>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_6', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [74]  (7.300 ns)
+	bus response operation ('empty_32', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [82]  (7.300 ns)
 
  <State 18>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_7', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [76]  (7.300 ns)
+	bus response operation ('empty_32', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [82]  (7.300 ns)
 
  <State 19>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_8', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [78]  (7.300 ns)
+	bus response operation ('empty_32', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [82]  (7.300 ns)
 
  <State 20>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_9', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [80]  (7.300 ns)
+	bus response operation ('empty_32', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [82]  (7.300 ns)
 
- <State 21>: 7.300ns
+ <State 21>: 0.789ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_10', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [82]  (7.300 ns)
+	'add' operation 6 bit ('add_ln51_2', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51) [78]  (0.789 ns)
 
- <State 22>: 7.300ns
+ <State 22>: 0.000ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_11', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [84]  (7.300 ns)
 
  <State 23>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_12', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [86]  (7.300 ns)
+	bus response operation ('empty_34', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [90]  (7.300 ns)
 
  <State 24>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_13', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [88]  (7.300 ns)
+	bus response operation ('empty_34', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [90]  (7.300 ns)
 
  <State 25>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_14', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [90]  (7.300 ns)
+	bus response operation ('empty_34', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [90]  (7.300 ns)
 
  <State 26>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_15', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [92]  (7.300 ns)
+	bus response operation ('empty_34', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [90]  (7.300 ns)
 
  <State 27>: 7.300ns
 The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_16', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [94]  (7.300 ns)
-
- <State 28>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_17', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [96]  (7.300 ns)
-
- <State 29>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_18', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [98]  (7.300 ns)
-
- <State 30>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_19', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [100]  (7.300 ns)
-
- <State 31>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_20', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [102]  (7.300 ns)
-
- <State 32>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_21', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [104]  (7.300 ns)
-
- <State 33>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_22', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [106]  (7.300 ns)
-
- <State 34>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_23', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [108]  (7.300 ns)
-
- <State 35>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_read_24', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [110]  (7.300 ns)
-
- <State 36>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [137]  (7.300 ns)
-
- <State 37>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_1', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [139]  (7.300 ns)
-
- <State 38>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_34', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [123]  (7.300 ns)
-
- <State 39>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_34', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [123]  (7.300 ns)
-
- <State 40>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_34', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [123]  (7.300 ns)
-
- <State 41>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_34', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [123]  (7.300 ns)
-
- <State 42>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_34', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [123]  (7.300 ns)
-
- <State 43>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_7', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [151]  (7.300 ns)
-
- <State 44>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_8', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [153]  (7.300 ns)
-
- <State 45>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_9', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [155]  (7.300 ns)
-
- <State 46>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_10', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [157]  (7.300 ns)
-
- <State 47>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_11', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [159]  (7.300 ns)
-
- <State 48>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_12', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [161]  (7.300 ns)
-
- <State 49>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_13', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [163]  (7.300 ns)
-
- <State 50>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_14', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [165]  (7.300 ns)
-
- <State 51>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_15', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [167]  (7.300 ns)
-
- <State 52>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_16', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [169]  (7.300 ns)
-
- <State 53>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_17', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [171]  (7.300 ns)
-
- <State 54>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_18', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [173]  (7.300 ns)
-
- <State 55>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_19', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [175]  (7.300 ns)
-
- <State 56>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_20', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [177]  (7.300 ns)
-
- <State 57>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_21', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [179]  (7.300 ns)
-
- <State 58>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_22', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [181]  (7.300 ns)
-
- <State 59>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_23', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [183]  (7.300 ns)
-
- <State 60>: 7.300ns
-The critical path consists of the following:
-	bus read operation ('WEIGHTS_addr_1_read_24', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'WEIGHTS' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [185]  (7.300 ns)
-
- <State 61>: 1.085ns
-The critical path consists of the following:
-	'call' operation 0 bit ('call_ln22', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22) to 'convolution1_hls_Pipeline_VITIS_LOOP_22_21' [191]  (1.085 ns)
-
- <State 62>: 0.000ns
-The critical path consists of the following:
-
- <State 63>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_40', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [192]  (7.300 ns)
-
- <State 64>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_40', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [192]  (7.300 ns)
-
- <State 65>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_40', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [192]  (7.300 ns)
-
- <State 66>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_40', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [192]  (7.300 ns)
-
- <State 67>: 7.300ns
-The critical path consists of the following:
-	bus response operation ('empty_40', ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) on port 'OUTPUT_r' (../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18) [192]  (7.300 ns)
+	bus response operation ('empty_34', ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) on port 'OUTPUT_r' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42) [90]  (7.300 ns)
 
 
 ============================================================
@@ -815,46 +430,6 @@ N/A
 	State 25
 	State 26
 	State 27
-	State 28
-	State 29
-	State 30
-	State 31
-	State 32
-	State 33
-	State 34
-	State 35
-	State 36
-	State 37
-	State 38
-	State 39
-	State 40
-	State 41
-	State 42
-	State 43
-	State 44
-	State 45
-	State 46
-	State 47
-	State 48
-	State 49
-	State 50
-	State 51
-	State 52
-	State 53
-	State 54
-	State 55
-	State 56
-	State 57
-	State 58
-	State 59
-	State 60
-	State 61
-	State 62
-	State 63
-	State 64
-	State 65
-	State 66
-	State 67
 
 
 ============================================================

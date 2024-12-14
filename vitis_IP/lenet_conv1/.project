@@ -42,9 +42,9 @@
 			<location>E:/Vitis/lenet_conv1/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/letnet_conv1_hls.cpp</name>
+			<name>source/lenet_conv1_hls.cpp</name>
 			<type>1</type>
-			<location>E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp</location>
+			<location>E:/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

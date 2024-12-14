@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'convolution1_hls'" level="0">
-<item name = "Date">Fri Dec 13 16:11:25 2024
+<item name = "Date">Fri Dec 13 17:10:09 2024
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">lenet_conv1</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.833 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">27403, 27403, 0.274 ms, 0.274 ms, 27404, 27404, no</column>
+<column name="">353958, 353958, 3.540 ms, 3.540 ms, 353959, 353959, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_18_1">27402, 27402, 9134, -, -, 3, no</column>
+<column name="- VITIS_LOOP_42_7">352920, 352920, 117640, -, -, 3, no</column>
 </table>
 </item>
 </section>

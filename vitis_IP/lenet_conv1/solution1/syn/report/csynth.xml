@@ -15,49 +15,49 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.833</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>27403</Best-caseLatency>
-            <Average-caseLatency>27403</Average-caseLatency>
-            <Worst-caseLatency>27403</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.274 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.274 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.274 ms</Worst-caseRealTimeLatency>
-            <Interval-min>27404</Interval-min>
-            <Interval-max>27404</Interval-max>
+            <Best-caseLatency>353958</Best-caseLatency>
+            <Average-caseLatency>353958</Average-caseLatency>
+            <Worst-caseLatency>353958</Worst-caseLatency>
+            <Best-caseRealTimeLatency>3.540 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>3.540 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>3.540 ms</Worst-caseRealTimeLatency>
+            <Interval-min>353959</Interval-min>
+            <Interval-max>353959</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
-            <VITIS_LOOP_18_1>
+            <VITIS_LOOP_42_7>
                 <Slack>7.30</Slack>
                 <TripCount>3</TripCount>
-                <Latency>27402</Latency>
-                <AbsoluteTimeLatency>274020</AbsoluteTimeLatency>
-                <IterationLatency>9134</IterationLatency>
+                <Latency>352920</Latency>
+                <AbsoluteTimeLatency>3529200</AbsoluteTimeLatency>
+                <IterationLatency>117640</IterationLatency>
                 <InstanceList/>
-            </VITIS_LOOP_18_1>
+            </VITIS_LOOP_42_7>
         </SummaryOfLoopLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
+            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
             <SummaryOfLoopViolations>
-                <VITIS_LOOP_18_1>
-                    <Name>VITIS_LOOP_18_1</Name>
+                <VITIS_LOOP_42_7>
+                    <Name>VITIS_LOOP_42_7</Name>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
-                </VITIS_LOOP_18_1>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
+                </VITIS_LOOP_42_7>
             </SummaryOfLoopViolations>
         </SummaryOfViolations>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>16</BRAM_18K>
-            <DSP>25</DSP>
-            <FF>17818</FF>
-            <LUT>20878</LUT>
+            <BRAM_18K>19</BRAM_18K>
+            <DSP>5</DSP>
+            <FF>5448</FF>
+            <LUT>6304</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -2642,81 +2642,101 @@
             <ModuleName>convolution1_hls</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_22_2_fu_214</InstName>
-                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_22_2</ModuleName>
+                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_fu_224</InstName>
+                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>214</ID>
-                    <BindInstances>indvars_iv_next_fu_1244_p2 add_ln32_fu_1268_p2</BindInstances>
+                    <ID>224</ID>
+                    <BindInstances>add_ln18_1_fu_124_p2 add_ln18_fu_147_p2 add_ln21_fu_191_p2 add_ln19_fu_206_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_22_21_fu_250</InstName>
-                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_22_21</ModuleName>
+                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5_fu_232</InstName>
+                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>250</ID>
-                    <BindInstances>indvars_iv_next1246_fu_1244_p2 add_ln32_fu_1268_p2</BindInstances>
+                    <ID>232</ID>
+                    <BindInstances>add_ln26_1_fu_152_p2 add_ln26_fu_181_p2 add_ln27_fu_227_p2 add_ln28_fu_324_p2 add_ln27_1_fu_330_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_36_6_fu_240</InstName>
+                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_36_6</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>240</ID>
+                    <BindInstances>add_ln36_fu_96_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1_fu_248</InstName>
+                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>248</ID>
+                    <BindInstances>add_ln44_1_fu_251_p2 add_ln44_fu_269_p2 add_ln45_fu_321_p2 add_ln48_fu_373_p2 add_ln51_1_fu_411_p2 empty_fu_438_p2 add_ln51_fu_463_p2 add_ln49_fu_482_p2 add_ln48_1_fu_500_p2 add_ln45_1_fu_514_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_fu_260</InstName>
+                    <ModuleName>convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>260</ID>
+                    <BindInstances>add_ln44_fu_247_p2 add_ln44_1_fu_265_p2 add_ln45_1_fu_317_p2 add_ln48_1_fu_369_p2 add_ln51_fu_407_p2 empty_fu_434_p2 add_ln51_1_fu_459_p2 add_ln49_fu_478_p2 add_ln48_fu_496_p2 add_ln45_fu_510_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>mul_3ns_8ns_10_1_1_U81 empty_25_fu_314_p2 mul_3ns_13ns_15_1_1_U82 empty_27_fu_470_p2 empty_28_fu_331_p2 tmp_fu_485_p2 empty_32_fu_495_p2 tmp1_fu_376_p2 empty_33_fu_386_p2 empty_36_fu_401_p2 add_ln18_fu_446_p2 CTRL_BUS_s_axi_U control_s_axi_U BIAS_m_axi_U INPUT_r_m_axi_U OUTPUT_r_m_axi_U WEIGHTS_m_axi_U</BindInstances>
+            <BindInstances>local_input_U local_weights_U local_bias_U mul_3ns_13ns_15_1_1_U26 empty_28_fu_366_p2 add_ln51_2_fu_482_p2 tmp_fu_381_p2 empty_31_fu_391_p2 add_ln42_fu_406_p2 CTRL_BUS_s_axi_U control_s_axi_U BIAS_m_axi_U INPUT_r_m_axi_U OUTPUT_r_m_axi_U WEIGHTS_m_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>convolution1_hls_Pipeline_VITIS_LOOP_22_2</Name>
+            <Name>convolution1_hls_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2</Name>
             <Loops>
-                <VITIS_LOOP_22_2/>
+                <VITIS_LOOP_18_1_VITIS_LOOP_19_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.833</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>4534</Best-caseLatency>
-                    <Average-caseLatency>4534</Average-caseLatency>
-                    <Worst-caseLatency>4534</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>45.340 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>45.340 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>45.340 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>4534</PipelineInitiationInterval>
+                    <Best-caseLatency>1027</Best-caseLatency>
+                    <Average-caseLatency>1027</Average-caseLatency>
+                    <Worst-caseLatency>1027</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>10.270 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.270 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>10.270 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1027</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_22_2>
-                        <Name>VITIS_LOOP_22_2</Name>
+                    <VITIS_LOOP_18_1_VITIS_LOOP_19_2>
+                        <Name>VITIS_LOOP_18_1_VITIS_LOOP_19_2</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>28</TripCount>
-                        <Latency>4532</Latency>
-                        <AbsoluteTimeLatency>45.320 us</AbsoluteTimeLatency>
-                        <PipelineII>160</PipelineII>
-                        <PipelineDepth>213</PipelineDepth>
+                        <TripCount>1024</TripCount>
+                        <Latency>1025</Latency>
+                        <AbsoluteTimeLatency>10.250 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_22_2>
+                    </VITIS_LOOP_18_1_VITIS_LOOP_19_2>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22</SourceLocation>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:19</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_22_2>
-                            <Name>VITIS_LOOP_22_2</Name>
-                            <IssueType>II Violation</IssueType>
-                            <ViolationType>Memory Dependency</ViolationType>
-                            <IterationDistance>1</IterationDistance>
-                            <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22</SourceLocation>
-                        </VITIS_LOOP_22_2>
+                        <VITIS_LOOP_18_1_VITIS_LOOP_19_2>
+                            <Name>VITIS_LOOP_18_1_VITIS_LOOP_19_2</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18</SourceLocation>
+                        </VITIS_LOOP_18_1_VITIS_LOOP_19_2>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>4169</FF>
+                    <FF>60</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>7105</LUT>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>173</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>6</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -2729,67 +2749,68 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_2" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next_fu_1244_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="indvars_iv_next"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln32_fu_1268_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1_VITIS_LOOP_19_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_1_fu_124_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln18_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1_VITIS_LOOP_19_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_147_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1_VITIS_LOOP_19_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln21_fu_191_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:21" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1_VITIS_LOOP_19_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln19_fu_206_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:19" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln19"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>convolution1_hls_Pipeline_VITIS_LOOP_22_21</Name>
+            <Name>convolution1_hls_Pipeline_VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5</Name>
             <Loops>
-                <VITIS_LOOP_22_2/>
+                <VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.833</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>4534</Best-caseLatency>
-                    <Average-caseLatency>4534</Average-caseLatency>
-                    <Worst-caseLatency>4534</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>45.340 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>45.340 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>45.340 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>4534</PipelineInitiationInterval>
+                    <Best-caseLatency>153</Best-caseLatency>
+                    <Average-caseLatency>153</Average-caseLatency>
+                    <Worst-caseLatency>153</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.530 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.530 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.530 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>153</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_22_2>
-                        <Name>VITIS_LOOP_22_2</Name>
+                    <VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5>
+                        <Name>VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>28</TripCount>
-                        <Latency>4532</Latency>
-                        <AbsoluteTimeLatency>45.320 us</AbsoluteTimeLatency>
-                        <PipelineII>160</PipelineII>
-                        <PipelineDepth>213</PipelineDepth>
+                        <TripCount>150</TripCount>
+                        <Latency>151</Latency>
+                        <AbsoluteTimeLatency>1.510 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_22_2>
+                    </VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22</SourceLocation>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:28</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_22_2>
-                            <Name>VITIS_LOOP_22_2</Name>
-                            <IssueType>II Violation</IssueType>
-                            <ViolationType>Memory Dependency</ViolationType>
-                            <IterationDistance>1</IterationDistance>
-                            <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22</SourceLocation>
-                        </VITIS_LOOP_22_2>
+                        <VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5>
+                            <Name>VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26</SourceLocation>
+                        </VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>4169</FF>
+                    <FF>60</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>1</UTIL_FF>
-                    <LUT>7105</LUT>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>269</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>6</UTIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -2802,92 +2823,326 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_2" OPTYPE="add" PRAGMA="" RTLNAME="indvars_iv_next1246_fu_1244_p2" SOURCE="" STORAGESUBTYPE="" URAM="0" VARIABLE="indvars_iv_next1246"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_22_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln32_fu_1268_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_1_fu_152_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln26_fu_181_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_227_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_324_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_26_3_VITIS_LOOP_27_4_VITIS_LOOP_28_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_1_fu_330_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:27" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln27_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution1_hls_Pipeline_VITIS_LOOP_36_6</Name>
+            <Loops>
+                <VITIS_LOOP_36_6/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>9</Best-caseLatency>
+                    <Average-caseLatency>9</Average-caseLatency>
+                    <Worst-caseLatency>9</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>90.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>90.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>9</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_36_6>
+                        <Name>VITIS_LOOP_36_6</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>6</TripCount>
+                        <Latency>7</Latency>
+                        <AbsoluteTimeLatency>70.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_36_6>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_36_6>
+                            <Name>VITIS_LOOP_36_6</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36</SourceLocation>
+                        </VITIS_LOOP_36_6>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>46</FF>
+                    <AVAIL_FF>234240</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>69</LUT>
+                    <AVAIL_LUT>117120</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>288</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1248</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>64</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_36_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln36_fu_96_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln36"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1</Name>
+            <Loops>
+                <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>58812</Best-caseLatency>
+                    <Average-caseLatency>58812</Average-caseLatency>
+                    <Worst-caseLatency>58812</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.588 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.588 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.588 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>58812</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                        <Name>VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>19600</TripCount>
+                        <Latency>58810</Latency>
+                        <AbsoluteTimeLatency>0.588 ms</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
+                        <PipelineDepth>14</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:46</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                            <Name>VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48</SourceLocation>
+                        </VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>389</FF>
+                    <AVAIL_FF>234240</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>582</LUT>
+                    <AVAIL_LUT>117120</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>288</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1248</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>64</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_1_fu_251_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln44_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_269_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_321_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_373_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_1_fu_411_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_438_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_463_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_482_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_1_fu_500_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln48_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_1_fu_514_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln45_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS</Name>
+            <Loops>
+                <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>58812</Best-caseLatency>
+                    <Average-caseLatency>58812</Average-caseLatency>
+                    <Worst-caseLatency>58812</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.588 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.588 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.588 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>58812</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                        <Name>VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>19600</TripCount>
+                        <Latency>58810</Latency>
+                        <AbsoluteTimeLatency>0.588 ms</AbsoluteTimeLatency>
+                        <PipelineII>3</PipelineII>
+                        <PipelineDepth>14</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:46</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                            <Name>VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Memory Dependency</ViolationType>
+                            <IterationDistance>1</IterationDistance>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48</SourceLocation>
+                        </VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>384</FF>
+                    <AVAIL_FF>234240</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>582</LUT>
+                    <AVAIL_LUT>117120</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>288</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1248</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>64</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_247_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_1_fu_265_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln44_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_1_fu_317_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln45_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_1_fu_369_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln48_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_407_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_434_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_1_fu_459_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln49_fu_478_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:49" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_496_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:48" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_LOOP_49_11" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_510_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln45"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>convolution1_hls</Name>
             <Loops>
-                <VITIS_LOOP_18_1/>
+                <VITIS_LOOP_42_7/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.833</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>27403</Best-caseLatency>
-                    <Average-caseLatency>27403</Average-caseLatency>
-                    <Worst-caseLatency>27403</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.274 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.274 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.274 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>27404</PipelineInitiationInterval>
+                    <Best-caseLatency>353958</Best-caseLatency>
+                    <Average-caseLatency>353958</Average-caseLatency>
+                    <Worst-caseLatency>353958</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>3.540 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>3.540 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>3.540 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>353959</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_18_1>
-                        <Name>VITIS_LOOP_18_1</Name>
+                    <VITIS_LOOP_42_7>
+                        <Name>VITIS_LOOP_42_7</Name>
                         <Slack>7.30</Slack>
                         <TripCount>3</TripCount>
-                        <Latency>27402</Latency>
-                        <AbsoluteTimeLatency>0.274 ms</AbsoluteTimeLatency>
-                        <IterationLatency>9134</IterationLatency>
-                        <PipelineDepth>9134</PipelineDepth>
+                        <Latency>352920</Latency>
+                        <AbsoluteTimeLatency>3.529 ms</AbsoluteTimeLatency>
+                        <IterationLatency>117640</IterationLatency>
+                        <PipelineDepth>117640</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_convolution1_hls_Pipeline_VITIS_LOOP_22_2_fu_214</Instance>
-                            <Instance>grp_convolution1_hls_Pipeline_VITIS_LOOP_22_21_fu_250</Instance>
+                            <Instance>grp_convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_1_fu_248</Instance>
+                            <Instance>grp_convolution1_hls_Pipeline_VITIS_LOOP_44_8_VITIS_LOOP_45_9_VITIS_LOOP_48_10_VITIS_fu_260</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_18_1>
+                    </VITIS_LOOP_42_7>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
+                    <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
                     <SummaryOfLoopViolations>
-                        <VITIS_LOOP_18_1>
-                            <Name>VITIS_LOOP_18_1</Name>
+                        <VITIS_LOOP_42_7>
+                            <Name>VITIS_LOOP_42_7</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18</SourceLocation>
-                        </VITIS_LOOP_18_1>
+                            <SourceLocation>../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42</SourceLocation>
+                        </VITIS_LOOP_42_7>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>16</BRAM_18K>
+                    <BRAM_18K>19</BRAM_18K>
                     <AVAIL_BRAM>288</AVAIL_BRAM>
-                    <UTIL_BRAM>5</UTIL_BRAM>
-                    <DSP>25</DSP>
+                    <UTIL_BRAM>6</UTIL_BRAM>
+                    <DSP>5</DSP>
                     <AVAIL_DSP>1248</AVAIL_DSP>
-                    <UTIL_DSP>2</UTIL_DSP>
-                    <FF>17818</FF>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>5448</FF>
                     <AVAIL_FF>234240</AVAIL_FF>
-                    <UTIL_FF>7</UTIL_FF>
-                    <LUT>20878</LUT>
+                    <UTIL_FF>2</UTIL_FF>
+                    <LUT>6304</LUT>
                     <AVAIL_LUT>117120</AVAIL_LUT>
-                    <UTIL_LUT>17</UTIL_LUT>
+                    <UTIL_LUT>5</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>64</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_8ns_10_1_1_U81" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_25_fu_314_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_25"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_13ns_15_1_1_U82" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_26"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_27_fu_470_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_27"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_331_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_28"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="tmp_fu_485_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_32_fu_495_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_32"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="tmp1_fu_376_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_33_fu_386_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_33"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_36_fu_401_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_36"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_18_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_446_p2" SOURCE="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln18"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_input_U" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:13" STORAGESIZE="32 1024 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="local_input"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_weights_U" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:14" STORAGESIZE="32 150 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="local_weights"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="local_bias_U" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:15" STORAGESIZE="32 6 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="local_bias"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_13ns_15_1_1_U26" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_366_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_2_fu_482_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="add" PRAGMA="" RTLNAME="tmp_fu_381_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="add" PRAGMA="" RTLNAME="empty_31_fu_391_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_42_7" OPTYPE="add" PRAGMA="" RTLNAME="add_ln42_fu_406_p2" SOURCE="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln42"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="CTRL_BUS" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="CTRL_BUS_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="BIAS" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="BIAS_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
@@ -2898,7 +3153,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export version="1.0.0"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="input" index="0" direction="in" srcType="float*" srcSize="32">
             <hwRefs>
@@ -3424,32 +3681,39 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
-                    <column name="m_axi_INPUT_r">read, 160, 32, , </column>
-                    <column name="m_axi_OUTPUT_r">write, 784, 32, VITIS_LOOP_22_2, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19</column>
-                    <column name="m_axi_WEIGHTS">read, 25, 32, , </column>
+                    <column name="m_axi_BIAS">read, 6, 32, VITIS_LOOP_36_6, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22</column>
+                    <column name="m_axi_INPUT_r">read, 1024, 32, VITIS_LOOP_18_1, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18:22</column>
+                    <column name="m_axi_OUTPUT_r">write, 784, 32, VITIS_LOOP_44_8, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44:19</column>
+                    <column name="m_axi_WEIGHTS">read, 150, 32, VITIS_LOOP_26_3, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26:22</column>
                 </table>
             </item>
             <item name="All M_AXI Variable Accesses">
                 <table>
                     <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
-                    <column name="m_axi_INPUT">input, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43, read, Widen Fail, , , , 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_INPUT">input, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43, read, Fail, , VITIS_LOOP_22_2, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19, 214-230, Stride is incompatible</column>
-                    <column name="m_axi_INPUT">input, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:32:43, read, Inferred, 160, VITIS_LOOP_22_2, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19, , </column>
-                    <column name="m_axi_OUTPUT">output, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34, write, Widen Fail, , VITIS_LOOP_22_2, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_OUTPUT">output, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34, write, Fail, , VITIS_LOOP_18_1, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:18:19, 214-230, Stride is incompatible</column>
-                    <column name="m_axi_OUTPUT">output, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:39:34, write, Inferred, 784, VITIS_LOOP_22_2, ../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:22:19, , </column>
+                    <column name="m_axi_BIAS">bias, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:38:19, read, Widen Fail, , VITIS_LOOP_36_6, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_BIAS">bias, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:38:19, read, Inferred, 6, VITIS_LOOP_36_6, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:36:22, , </column>
+                    <column name="m_axi_INPUT">input, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:21:22, read, Widen Fail, , VITIS_LOOP_19_2, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:19:26, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_INPUT">input, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:21:22, read, Inferred, 1024, VITIS_LOOP_18_1, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:18:22, , </column>
+                    <column name="m_axi_OUTPUT">output, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34, write, Widen Fail, , VITIS_LOOP_45_9, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:45:30, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_OUTPUT">output, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34, write, Fail, , VITIS_LOOP_42_7, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:42:22, 214-230, Stride is incompatible</column>
+                    <column name="m_axi_OUTPUT">output, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:55:34, write, Inferred, 784, VITIS_LOOP_44_8, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:44:19, , </column>
+                    <column name="m_axi_WEIGHTS">weights, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:30:30, read, Widen Fail, , VITIS_LOOP_28_5, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:28:30, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_WEIGHTS">weights, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:30:30, read, Inferred, 150, VITIS_LOOP_26_3, ../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:26:22, , </column>
                 </table>
             </item>
         </section>
     </ReportBurst>
     <PragmaReport>
-        <Pragma type="interface" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:11" status="valid" parentFunction="convolution1_hls" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL_BUS"/>
-        <Pragma type="interface" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:12" status="valid" parentFunction="convolution1_hls" variable="input" isDirective="0" options="m_axi depth=1024 port=input offset=slave bundle=INPUT"/>
-        <Pragma type="interface" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:13" status="valid" parentFunction="convolution1_hls" variable="weights" isDirective="0" options="m_axi depth=1024 port=weights offset=slave bundle=WEIGHTS"/>
-        <Pragma type="interface" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:14" status="valid" parentFunction="convolution1_hls" variable="bias" isDirective="0" options="m_axi depth=6 port=bias offset=slave bundle=BIAS"/>
-        <Pragma type="interface" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:15" status="valid" parentFunction="convolution1_hls" variable="output" isDirective="0" options="m_axi depth=1680 port=output offset=slave bundle=OUTPUT"/>
-        <Pragma type="unroll" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:19" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="factor=2"/>
-        <Pragma type="pipeline" location="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp:23" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:7" status="valid" parentFunction="convolution1_hls" variable="return" isDirective="0" options="s_axilite port=return bundle=CTRL_BUS"/>
+        <Pragma type="interface" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:8" status="valid" parentFunction="convolution1_hls" variable="input" isDirective="0" options="m_axi depth=1024 port=input offset=slave bundle=INPUT"/>
+        <Pragma type="interface" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:9" status="valid" parentFunction="convolution1_hls" variable="weights" isDirective="0" options="m_axi depth=1024 port=weights offset=slave bundle=WEIGHTS"/>
+        <Pragma type="interface" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:10" status="valid" parentFunction="convolution1_hls" variable="bias" isDirective="0" options="m_axi depth=6 port=bias offset=slave bundle=BIAS"/>
+        <Pragma type="interface" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:11" status="valid" parentFunction="convolution1_hls" variable="output" isDirective="0" options="m_axi depth=1680 port=output offset=slave bundle=OUTPUT"/>
+        <Pragma type="pipeline" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:20" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:29" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:37" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:43" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="factor=2"/>
+        <Pragma type="pipeline" location="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp:50" status="valid" parentFunction="convolution1_hls" variable="" isDirective="0" options="II=1"/>
     </PragmaReport>
 </profile>
 

@@ -5,7 +5,7 @@
         <SimFlow name="csim"/>
     </Simulation>
     <files xmlns="">
-        <file name="../Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/letnet_hls/letnet_conv1_hls.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv1_hls.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

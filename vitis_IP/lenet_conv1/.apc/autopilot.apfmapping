@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="letnet_conv1_hls.cpp" path="E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\letnet_hls\letnet_conv1_hls.cpp"/>
+    <originFiles name="lenet_conv1_hls.cpp" path="E:\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\lenet_hls\lenet_conv1_hls.cpp"/>
   </source>
   <testbench/>
 </autopilotfilemapping:AutoPilotFileMapping>
