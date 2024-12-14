@@ -1,0 +1,11 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "lenet_fc6_hls.cpp",
+    "fileloc": 5,
+    "instructions": 90,
+    "name": "fc6_hls",
+    "total_instructions": 90
+  }
+}

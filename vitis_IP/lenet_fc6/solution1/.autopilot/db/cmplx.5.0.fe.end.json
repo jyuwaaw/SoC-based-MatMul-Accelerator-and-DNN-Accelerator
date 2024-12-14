@@ -1,0 +1,56 @@
+{
+    "0": {
+        "name": "fc6_hls",
+        "file": "lenet_fc6_hls.cpp",
+        "fileloc": "5",
+        "instructions": "99",
+        "total_instructions": "169",
+        "calls": "2 1",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "1": {
+        "name": "fc6_hls_Pipeline_VITIS_LOOP_24_21",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_fc6_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "fc6_hls_Pipeline_VITIS_LOOP_24_2",
+        "file": "..\/SoC-based-MatMul-Accelerator-and-DNN-Accelerator\/lenet_hls\/lenet_fc6_hls.cpp",
+        "fileloc": "21",
+        "instructions": "35",
+        "total_instructions": "35",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}
