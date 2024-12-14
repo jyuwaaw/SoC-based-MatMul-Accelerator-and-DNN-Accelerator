@@ -1,6 +1,0 @@
-pl_vecadd_fadd_32ns_32ns_32_4_full_dsp_1
-pl_vecadd_data0_m_axi
-pl_vecadd_data1_m_axi
-pl_vecadd_data2_m_axi
-pl_vecadd_ctrl_s_axi
-pl_vecadd

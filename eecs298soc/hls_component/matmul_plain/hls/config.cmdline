@@ -1,3 +1,0 @@
-relativeroot=E:/Xilinx_Prj/SoC-based-MatMul-Accelerator-and-DNN-Accelerator/eecs298soc/hls_component
-original_argv=-c --mode hls --config E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\eecs298soc\hls_component\hls_config.cfg --work_dir matmul_plain 
-

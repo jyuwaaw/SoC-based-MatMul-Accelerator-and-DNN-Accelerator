@@ -1,3 +1,0 @@
-26 errors generated.
-Error while processing E:\Xilinx_Prj\SoC-based-MatMul-Accelerator-and-DNN-Accelerator\eecs298soc\hls_component\matmul_plain\hls\.autopilot\db\Matmul_no_op.pp.0.cpp.
-clang-tidy applied 133 of 133 suggested fixes.

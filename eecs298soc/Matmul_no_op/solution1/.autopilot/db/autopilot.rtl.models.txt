@@ -1,7 +1,0 @@
-matmul_plain_fadd_32ns_32ns_32_4_full_dsp_1
-matmul_plain_fmul_32ns_32ns_32_3_max_dsp_1
-matmul_plain_dataA_m_axi
-matmul_plain_dataB_m_axi
-matmul_plain_dataAB_m_axi
-matmul_plain_ctrl_s_axi
-matmul_plain

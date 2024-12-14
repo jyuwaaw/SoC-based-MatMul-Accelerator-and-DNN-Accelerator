@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source>
-    <originFiles name="pl_vecadd.cpp" path="/users/ugrad/yuhuah2/eecs298soc/pl_vecadd.cpp"/>
-  </source>
-  <testbench/>
-</autopilotfilemapping:AutoPilotFileMapping>
