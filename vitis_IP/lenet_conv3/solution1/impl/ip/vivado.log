@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Dec 13 17:05:03 2024
+# Process ID: 348
+# Current directory: E:/Vitis/lenet_conv3/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: E:/Vitis/lenet_conv3/solution1/impl/ip/vivado.log
+# Journal file: E:/Vitis/lenet_conv3/solution1/impl/ip\vivado.jou
+# Running On: Benji-ProArt, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 25131 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 546.855 ; gain = 182.336
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'convolution3_hls_fadd_32ns_32ns_32_4_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'convolution3_hls_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'convolution3_hls_fadd_32ns_32ns_32_4_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'convolution3_hls_fmul_32ns_32ns_32_3_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'convolution3_hls_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'convolution3_hls_fmul_32ns_32ns_32_3_max_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 17:05:17 2024...

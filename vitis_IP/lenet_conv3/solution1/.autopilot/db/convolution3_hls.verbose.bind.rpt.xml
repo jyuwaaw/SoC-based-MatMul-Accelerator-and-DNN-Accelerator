@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'convolution3_hls'" level="0">
+<item name = "Date">Fri Dec 13 17:04:33 2024
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">lenet_conv3</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">722726, 722726, 7.227 ms, 7.227 ms, 722727, 722727, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2_VITIS_LOOP_26_3_fu_342">convolution3_hls_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2_VITIS_LOOP_26_3, 1179, 1179, 11.790 us, 11.790 us, 1179, 1179, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_34_4_VITIS_LOOP_35_5_VITIS_LOOP_36_6_VITIS_s_fu_355">convolution3_hls_Pipeline_VITIS_LOOP_34_4_VITIS_LOOP_35_5_VITIS_LOOP_36_6_VITIS_s, 2403, 2403, 24.030 us, 24.030 us, 2403, 2403, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_46_8_fu_378">convolution3_hls_Pipeline_VITIS_LOOP_46_8, 19, 19, 0.190 us, 0.190 us, 19, 19, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_3_fu_386">convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_3, 45012, 45012, 0.450 ms, 0.450 ms, 45012, 45012, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_2_fu_406">convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_2, 45012, 45012, 0.450 ms, 0.450 ms, 45012, 45012, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_1_fu_426">convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_1, 45012, 45012, 0.450 ms, 0.450 ms, 45012, 45012, no</column>
+<column name="grp_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_fu_446">convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT, 45012, 45012, 0.450 ms, 0.450 ms, 45012, 45012, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_52_9">720312, 720312, 180078, -, -, 4, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

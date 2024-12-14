@@ -1,0 +1,34 @@
+set SynModuleInfo {
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2_VITIS_LOOP_26_3 MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2_VITIS_LOOP_26_3 RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_24_1_VITIS_LOOP_25_2_VITIS_LOOP_26_3
+    SUBMODULES {
+      {MODELNAME convolution3_hls_flow_control_loop_pipe_sequential_init RTLNAME convolution3_hls_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME convolution3_hls_flow_control_loop_pipe_sequential_init_U}
+    }
+  }
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_34_4_VITIS_LOOP_35_5_VITIS_LOOP_36_6_VITIS_ MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_34_4_VITIS_LOOP_35_5_VITIS_LOOP_36_6_VITIS_s RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_34_4_VITIS_LOOP_35_5_VITIS_LOOP_36_6_VITIS_s}
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_46_8 MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_46_8 RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_46_8}
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT.3 MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_3 RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_3
+    SUBMODULES {
+      {MODELNAME convolution3_hls_sparsemux_13_3_32_1_1 RTLNAME convolution3_hls_sparsemux_13_3_32_1_1 BINDTYPE op TYPE sparsemux IMPL auto}
+      {MODELNAME convolution3_hls_sparsemux_9_4_32_1_1 RTLNAME convolution3_hls_sparsemux_9_4_32_1_1 BINDTYPE op TYPE sparsemux IMPL auto}
+    }
+  }
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT.2 MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_2 RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_2}
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT.1 MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_1 RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT_1}
+  {SRCNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT MODELNAME convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT RTLNAME convolution3_hls_convolution3_hls_Pipeline_VITIS_LOOP_54_10_VITIS_LOOP_55_11_VITIS_LOOP_57_12_VIT}
+  {SRCNAME convolution3_hls MODELNAME convolution3_hls RTLNAME convolution3_hls IS_TOP 1
+    SUBMODULES {
+      {MODELNAME convolution3_hls_mul_5ns_10ns_13_1_1 RTLNAME convolution3_hls_mul_5ns_10ns_13_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_fadd_32ns_32ns_32_4_full_dsp_1 RTLNAME convolution3_hls_fadd_32ns_32ns_32_4_full_dsp_1 BINDTYPE op TYPE fadd IMPL fulldsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_fmul_32ns_32ns_32_3_max_dsp_1 RTLNAME convolution3_hls_fmul_32ns_32ns_32_3_max_dsp_1 BINDTYPE op TYPE fmul IMPL maxdsp LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_local_input_RAM_AUTO_1R1W RTLNAME convolution3_hls_local_input_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_local_weights_RAM_AUTO_1R1W RTLNAME convolution3_hls_local_weights_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_local_bias_RAM_AUTO_1R1W RTLNAME convolution3_hls_local_bias_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME convolution3_hls_INPUT_r_m_axi RTLNAME convolution3_hls_INPUT_r_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME convolution3_hls_WEIGHTS_m_axi RTLNAME convolution3_hls_WEIGHTS_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME convolution3_hls_BIAS_m_axi RTLNAME convolution3_hls_BIAS_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME convolution3_hls_OUTPUT_r_m_axi RTLNAME convolution3_hls_OUTPUT_r_m_axi BINDTYPE interface TYPE adapter IMPL m_axi}
+      {MODELNAME convolution3_hls_CTRL_BUS_s_axi RTLNAME convolution3_hls_CTRL_BUS_s_axi BINDTYPE interface TYPE interface_s_axilite}
+      {MODELNAME convolution3_hls_control_s_axi RTLNAME convolution3_hls_control_s_axi BINDTYPE interface TYPE interface_s_axilite}
+    }
+  }
+}

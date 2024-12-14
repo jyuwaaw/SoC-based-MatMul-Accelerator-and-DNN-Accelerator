@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="E:/Vitis/lenet_conv3/solution1/csynth.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=convolution3_hls" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=CTRL_BUS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=4704 port=input offset=slave bundle=INPUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=9600 port=weights offset=slave bundle=WEIGHTS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=16 port=bias offset=slave bundle=BIAS" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1600 port=output offset=slave bundle=OUTPUT" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_input dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=local_weights dim=1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=4" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="convolution3_hls" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:9:0" msg_body="Unrolling loop 'VITIS_LOOP_52_9' (../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:52:22) in function 'convolution3_hls' partially with a factor of 4">
+        <args Factor="4" LoopLoc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:52:22" LoopName="VITIS_LOOP_52_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:16:8" msg_body="Applying array_partition to 'local_input': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="local_input"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="../SoC-based-MatMul-Accelerator-and-DNN-Accelerator/lenet_hls/lenet_conv3_hls.cpp:17:11" msg_body="Applying array_partition to 'local_weights': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="local_weights"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
