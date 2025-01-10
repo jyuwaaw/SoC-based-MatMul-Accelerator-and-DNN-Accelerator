@@ -1,4 +1,6 @@
 # SoC-based-MatMul-Accelerator-and-DNN-Accelerator
+------
+Course Project of EECS 298 SoC 2024 Fall
 This project focused on developing and implementing two System-on-Chip (SoC) accelerators for performance-critical applications: Matrix Multiplication (MatMul) and Deep Neural Network (DNN) Inference. The work involved designing accelerator Intellectual Property (IP) in Vitis High-Level Synthesis (HLS), integrating the IP into an SoC platform, generating FPGA bitstreams using Vivado, and evaluating the accelerators on the AMD KR260 board with the PYNQ framework.
 
 Part 1: Matrix Multiplication
